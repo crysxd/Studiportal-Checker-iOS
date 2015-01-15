@@ -1,0 +1,17 @@
+/* 
+  strings_de.strings
+  HFU Studiportal
+
+  Created by Christian Würthner on 15.01.15.
+  Copyright (c) 2015 Hochschule Furtwangen University. All rights reserved.
+*/
+
+"exam.state.be"     = "Bestanden";
+"exam.state.an"     = "Angemeldet";
+"exam.state.nb"     = "Nicht bestanden";
+"exam.state.en"     = "Endgültig nicht bestanden";
+"exam.note.gr"      = "Gehnehmigter Rücktritt";
+"exam.note.u"       = "Unetschuldigter Rücktritt";
+"exam.note.vl"      = "Prüfungsvorleistung fehlt";
+"exam.note.k"       = "Krankheit";
+"exam.note.sa"      = "Studium abgebrochen";

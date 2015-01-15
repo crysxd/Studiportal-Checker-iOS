@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		604F0A361A68226B00E0BB07 /* Exam.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 604F0A351A68226B00E0BB07 /* Exam.cpp */; };
+		604F0A391A6827B400E0BB07 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 604F0A381A6827B400E0BB07 /* Localizable.strings */; };
+		604F0A3B1A682D3C00E0BB07 /* LocalStrings.mm in Sources */ = {isa = PBXBuildFile; fileRef = 604F0A3A1A682D3C00E0BB07 /* LocalStrings.mm */; };
 		6064E6A41A66B9D3000B7DDC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6064E6A31A66B9D3000B7DDC /* main.m */; };
 		6064E6A71A66B9D3000B7DDC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6064E6A61A66B9D3000B7DDC /* AppDelegate.m */; };
 		6064E6AA1A66B9D3000B7DDC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6064E6A91A66B9D3000B7DDC /* ViewController.m */; };
 		6064E6AD1A66B9D3000B7DDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6064E6AB1A66B9D3000B7DDC /* Main.storyboard */; };
 		6064E6AF1A66B9D3000B7DDC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6064E6AE1A66B9D3000B7DDC /* Images.xcassets */; };
 		6064E6B21A66B9D3000B7DDC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6064E6B01A66B9D3000B7DDC /* LaunchScreen.xib */; };
-		6064E6BE1A66B9D3000B7DDC /* HFU_StudiportalTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6064E6BD1A66B9D3000B7DDC /* HFU_StudiportalTests.m */; };
+		6064E6BE1A66B9D3000B7DDC /* HFU_StudiportalTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6064E6BD1A66B9D3000B7DDC /* HFU_StudiportalTests.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,10 +30,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		604F0A341A68211100E0BB07 /* Exam.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; path = Exam.h; sourceTree = "<group>"; };
+		604F0A351A68226B00E0BB07 /* Exam.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Exam.cpp; sourceTree = "<group>"; };
+		604F0A371A68267B00E0BB07 /* LocalStrings.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; path = LocalStrings.h; sourceTree = "<group>"; };
+		604F0A381A6827B400E0BB07 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		604F0A3A1A682D3C00E0BB07 /* LocalStrings.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LocalStrings.mm; sourceTree = "<group>"; };
 		6064E69E1A66B9D3000B7DDC /* HFU Studiportal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HFU Studiportal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6064E6A21A66B9D3000B7DDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6064E6A31A66B9D3000B7DDC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		6064E6A51A66B9D3000B7DDC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6064E6A51A66B9D3000B7DDC /* AppDelegate.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6064E6A61A66B9D3000B7DDC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		6064E6A81A66B9D3000B7DDC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		6064E6A91A66B9D3000B7DDC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
@@ -39,7 +47,7 @@
 		6064E6B11A66B9D3000B7DDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		6064E6B71A66B9D3000B7DDC /* HFU StudiportalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HFU StudiportalTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6064E6BC1A66B9D3000B7DDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6064E6BD1A66B9D3000B7DDC /* HFU_StudiportalTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HFU_StudiportalTests.m; sourceTree = "<group>"; };
+		6064E6BD1A66B9D3000B7DDC /* HFU_StudiportalTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = HFU_StudiportalTests.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +68,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		604F0A311A6820F900E0BB07 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				604F0A341A68211100E0BB07 /* Exam.h */,
+				604F0A351A68226B00E0BB07 /* Exam.cpp */,
+				604F0A371A68267B00E0BB07 /* LocalStrings.h */,
+				604F0A3A1A682D3C00E0BB07 /* LocalStrings.mm */,
+			);
+			name = data;
+			sourceTree = "<group>";
+		};
 		6064E6951A66B9D3000B7DDC = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +100,7 @@
 		6064E6A01A66B9D3000B7DDC /* HFU Studiportal */ = {
 			isa = PBXGroup;
 			children = (
+				604F0A311A6820F900E0BB07 /* data */,
 				6064E6A51A66B9D3000B7DDC /* AppDelegate.h */,
 				6064E6A61A66B9D3000B7DDC /* AppDelegate.m */,
 				6064E6A81A66B9D3000B7DDC /* ViewController.h */,
@@ -96,6 +116,7 @@
 		6064E6A11A66B9D3000B7DDC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				604F0A381A6827B400E0BB07 /* Localizable.strings */,
 				6064E6A21A66B9D3000B7DDC /* Info.plist */,
 				6064E6A31A66B9D3000B7DDC /* main.m */,
 			);
@@ -105,7 +126,7 @@
 		6064E6BA1A66B9D3000B7DDC /* HFU StudiportalTests */ = {
 			isa = PBXGroup;
 			children = (
-				6064E6BD1A66B9D3000B7DDC /* HFU_StudiportalTests.m */,
+				6064E6BD1A66B9D3000B7DDC /* HFU_StudiportalTests.mm */,
 				6064E6BB1A66B9D3000B7DDC /* Supporting Files */,
 			);
 			path = "HFU StudiportalTests";
@@ -199,6 +220,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				604F0A391A6827B400E0BB07 /* Localizable.strings in Resources */,
 				6064E6AD1A66B9D3000B7DDC /* Main.storyboard in Resources */,
 				6064E6B21A66B9D3000B7DDC /* LaunchScreen.xib in Resources */,
 				6064E6AF1A66B9D3000B7DDC /* Images.xcassets in Resources */,
@@ -219,9 +241,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				604F0A361A68226B00E0BB07 /* Exam.cpp in Sources */,
 				6064E6AA1A66B9D3000B7DDC /* ViewController.m in Sources */,
 				6064E6A71A66B9D3000B7DDC /* AppDelegate.m in Sources */,
 				6064E6A41A66B9D3000B7DDC /* main.m in Sources */,
+				604F0A3B1A682D3C00E0BB07 /* LocalStrings.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,7 +253,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6064E6BE1A66B9D3000B7DDC /* HFU_StudiportalTests.m in Sources */,
+				6064E6BE1A66B9D3000B7DDC /* HFU_StudiportalTests.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
