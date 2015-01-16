@@ -17,6 +17,7 @@
 		6064E6AF1A66B9D3000B7DDC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6064E6AE1A66B9D3000B7DDC /* Images.xcassets */; };
 		6064E6B21A66B9D3000B7DDC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6064E6B01A66B9D3000B7DDC /* LaunchScreen.xib */; };
 		6064E6BE1A66B9D3000B7DDC /* HFU_StudiportalTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6064E6BD1A66B9D3000B7DDC /* HFU_StudiportalTests.mm */; };
+		60983E7E1A696A5500DA4835 /* ExamCategory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 60983E7D1A696A5500DA4835 /* ExamCategory.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,9 @@
 		6064E6B71A66B9D3000B7DDC /* HFU StudiportalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HFU StudiportalTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6064E6BC1A66B9D3000B7DDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6064E6BD1A66B9D3000B7DDC /* HFU_StudiportalTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = HFU_StudiportalTests.mm; sourceTree = "<group>"; };
+		60983E7C1A6968B500DA4835 /* ExamCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExamCategory.h; sourceTree = "<group>"; };
+		60983E7D1A696A5500DA4835 /* ExamCategory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ExamCategory.cpp; sourceTree = "<group>"; };
+		60983E7F1A696FC500DA4835 /* Seperator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Seperator.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,9 @@
 			children = (
 				604F0A341A68211100E0BB07 /* Exam.h */,
 				604F0A351A68226B00E0BB07 /* Exam.cpp */,
+				60983E7C1A6968B500DA4835 /* ExamCategory.h */,
+				60983E7D1A696A5500DA4835 /* ExamCategory.cpp */,
+				60983E7F1A696FC500DA4835 /* Seperator.h */,
 				604F0A371A68267B00E0BB07 /* LocalStrings.h */,
 				604F0A3A1A682D3C00E0BB07 /* LocalStrings.mm */,
 			);
@@ -243,6 +250,7 @@
 			files = (
 				604F0A361A68226B00E0BB07 /* Exam.cpp in Sources */,
 				6064E6AA1A66B9D3000B7DDC /* ViewController.m in Sources */,
+				60983E7E1A696A5500DA4835 /* ExamCategory.cpp in Sources */,
 				6064E6A71A66B9D3000B7DDC /* AppDelegate.m in Sources */,
 				6064E6A41A66B9D3000B7DDC /* main.m in Sources */,
 				604F0A3B1A682D3C00E0BB07 /* LocalStrings.mm in Sources */,
