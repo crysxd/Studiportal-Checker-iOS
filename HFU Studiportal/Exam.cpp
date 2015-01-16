@@ -243,3 +243,9 @@ void Exam::setNote(std::string value) {
     this->note = value;
     
 }
+
+
+bool Exam::operator==(const Exam &e) {
+    return this->examNo == e.examNo;
+    
+}

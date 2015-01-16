@@ -70,7 +70,8 @@ public:
     void setComment(std::string value);
     void setResignation(std::string value);
     void setNote(std::string value);
-    
+    bool operator==(const Exam &e);
+
 };
 
 #endif
