@@ -119,8 +119,7 @@
 		6064E6A01A66B9D3000B7DDC /* HFU Studiportal */ = {
 			isa = PBXGroup;
 			children = (
-				607950AC1A6A973B003B1280 /* RefreshTask.cpp */,
-				607950AD1A6A973B003B1280 /* RefreshTask.h */,
+				607950B01A6A9F25003B1280 /* network */,
 				607950A51A6A9515003B1280 /* view */,
 				604F0A311A6820F900E0BB07 /* data */,
 				6064E6A51A66B9D3000B7DDC /* AppDelegate.h */,
@@ -173,6 +172,15 @@
 				607950A31A6A9509003B1280 /* NotificationHost.mm */,
 			);
 			name = view;
+			sourceTree = "<group>";
+		};
+		607950B01A6A9F25003B1280 /* network */ = {
+			isa = PBXGroup;
+			children = (
+				607950AC1A6A973B003B1280 /* RefreshTask.cpp */,
+				607950AD1A6A973B003B1280 /* RefreshTask.h */,
+			);
+			name = network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
