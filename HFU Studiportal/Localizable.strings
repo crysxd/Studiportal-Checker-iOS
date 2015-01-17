@@ -15,3 +15,4 @@
 "exam.note.vl"      = "Prüfungsvorleistung fehlt";
 "exam.note.k"       = "Krankheit";
 "exam.note.sa"      = "Studium abgebrochen";
+"dialog.name.error" = "Fehler";
