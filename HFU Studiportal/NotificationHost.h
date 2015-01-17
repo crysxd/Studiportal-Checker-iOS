@@ -7,7 +7,6 @@
 //
 
 #include <string>
-#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
 #ifndef HFU_Studiportal_NotificationHost_h
