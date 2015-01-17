@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DialogHost.h"
+#import "RefreshTask.h"
 
 @interface ViewController : UIViewController
 

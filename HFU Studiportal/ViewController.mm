@@ -14,9 +14,19 @@
 
 @implementation ViewController
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear: animated];
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    DialogHost *host = new DialogHost(self.view);
+    RefreshTask t("user", "password", host, NULL);
+    t.start();
+    
 }
 
 - (void)didReceiveMemoryWarning {
