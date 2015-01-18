@@ -20,11 +20,7 @@
 		607950A81A6A95F6003B1280 /* DialogHostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 607950A71A6A95F6003B1280 /* DialogHostViewController.m */; };
 		607950AE1A6A973B003B1280 /* RefreshTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 607950AC1A6A973B003B1280 /* RefreshTask.m */; };
 		607950B51A6BF3A6003B1280 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 607950B21A6BF3A6003B1280 /* MBProgressHUD.m */; };
-		607950B81A6BFE2E003B1280 /* ic_hfu_claim.png in Resources */ = {isa = PBXBuildFile; fileRef = 607950B71A6BFE2E003B1280 /* ic_hfu_claim.png */; };
-		607950BB1A6C0296003B1280 /* ic_user.png in Resources */ = {isa = PBXBuildFile; fileRef = 607950B91A6C0296003B1280 /* ic_user.png */; };
-		607950BC1A6C0296003B1280 /* ic_password.png in Resources */ = {isa = PBXBuildFile; fileRef = 607950BA1A6C0296003B1280 /* ic_password.png */; };
-		607950BE1A6C06E1003B1280 /* ic_hfu_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 607950BD1A6C06E1003B1280 /* ic_hfu_logo.png */; };
-		607950C01A6C07B0003B1280 /* ic_action_login.png in Resources */ = {isa = PBXBuildFile; fileRef = 607950BF1A6C07B0003B1280 /* ic_action_login.png */; };
+		607950C31A6C29CE003B1280 /* RefreshError.m in Sources */ = {isa = PBXBuildFile; fileRef = 607950C21A6C29CE003B1280 /* RefreshError.m */; };
 		60983E7E1A696A5500DA4835 /* ExamCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 60983E7D1A696A5500DA4835 /* ExamCategory.m */; };
 /* End PBXBuildFile section */
 
@@ -63,11 +59,8 @@
 		607950AD1A6A973B003B1280 /* RefreshTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefreshTask.h; sourceTree = "<group>"; };
 		607950B11A6BF3A6003B1280 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		607950B21A6BF3A6003B1280 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
-		607950B71A6BFE2E003B1280 /* ic_hfu_claim.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_hfu_claim.png; sourceTree = "<group>"; };
-		607950B91A6C0296003B1280 /* ic_user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_user.png; sourceTree = "<group>"; };
-		607950BA1A6C0296003B1280 /* ic_password.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_password.png; sourceTree = "<group>"; };
-		607950BD1A6C06E1003B1280 /* ic_hfu_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_hfu_logo.png; sourceTree = "<group>"; };
-		607950BF1A6C07B0003B1280 /* ic_action_login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_action_login.png; sourceTree = "<group>"; };
+		607950C11A6C294D003B1280 /* RefreshError.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RefreshError.h; sourceTree = "<group>"; };
+		607950C21A6C29CE003B1280 /* RefreshError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RefreshError.m; sourceTree = "<group>"; };
 		60983E7C1A6968B500DA4835 /* ExamCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExamCategory.h; sourceTree = "<group>"; };
 		60983E7D1A696A5500DA4835 /* ExamCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExamCategory.m; sourceTree = "<group>"; };
 		60983E7F1A696FC500DA4835 /* Seperator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Seperator.h; sourceTree = "<group>"; };
@@ -142,11 +135,6 @@
 		6064E6A11A66B9D3000B7DDC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				607950BF1A6C07B0003B1280 /* ic_action_login.png */,
-				607950BD1A6C06E1003B1280 /* ic_hfu_logo.png */,
-				607950B91A6C0296003B1280 /* ic_user.png */,
-				607950BA1A6C0296003B1280 /* ic_password.png */,
-				607950B71A6BFE2E003B1280 /* ic_hfu_claim.png */,
 				604F0A381A6827B400E0BB07 /* Localizable.strings */,
 				6064E6A21A66B9D3000B7DDC /* Info.plist */,
 				6064E6A31A66B9D3000B7DDC /* main.m */,
@@ -189,6 +177,8 @@
 			children = (
 				607950AD1A6A973B003B1280 /* RefreshTask.h */,
 				607950AC1A6A973B003B1280 /* RefreshTask.m */,
+				607950C11A6C294D003B1280 /* RefreshError.h */,
+				607950C21A6C29CE003B1280 /* RefreshError.m */,
 			);
 			name = network;
 			sourceTree = "<group>";
@@ -273,15 +263,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607950BE1A6C06E1003B1280 /* ic_hfu_logo.png in Resources */,
-				607950BB1A6C0296003B1280 /* ic_user.png in Resources */,
 				604F0A391A6827B400E0BB07 /* Localizable.strings in Resources */,
-				607950B81A6BFE2E003B1280 /* ic_hfu_claim.png in Resources */,
-				607950C01A6C07B0003B1280 /* ic_action_login.png in Resources */,
 				6064E6AD1A66B9D3000B7DDC /* Main.storyboard in Resources */,
 				6064E6B21A66B9D3000B7DDC /* LaunchScreen.xib in Resources */,
 				6064E6AF1A66B9D3000B7DDC /* Images.xcassets in Resources */,
-				607950BC1A6C0296003B1280 /* ic_password.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +292,7 @@
 				607950AE1A6A973B003B1280 /* RefreshTask.m in Sources */,
 				6064E6A71A66B9D3000B7DDC /* AppDelegate.m in Sources */,
 				607950A81A6A95F6003B1280 /* DialogHostViewController.m in Sources */,
+				607950C31A6C29CE003B1280 /* RefreshError.m in Sources */,
 				6064E6A41A66B9D3000B7DDC /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -21,3 +21,6 @@
 "dialog.text.refresh.logout"        = "Ausloggen...";
 "dialog.text.refresh.check"         = "Nach Änderungen suchen...";
 "dialog.button.ok"                  = "OK";
+"refresh.error.no_change"           = "Keine neuen Noten gefunden";
+"refresh.error.login"               = "Benutzername oder Passwort falsch";
+"refresh.error.no_connection"       = "Verbindung mit Studiportal nicht möglich";
