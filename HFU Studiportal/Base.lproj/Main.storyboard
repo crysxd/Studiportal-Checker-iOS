@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,22 +18,67 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hallo Welt!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7jw-0u-Pbg">
-                                <rect key="frame" x="16" y="20" width="568" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="20" width="107" height="21"/>
-                                </variation>
-                            </label>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WdC-fI-UlG">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
+                                <color key="backgroundColor" red="0.5430313349" green="0.69132721419999998" blue="0.29515084619999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Benutzername" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XLA-FB-oyR">
+                                <rect key="frame" x="16" y="80" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Passwort" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hkL-gR-8tw">
+                                <rect key="frame" x="16" y="118" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="go" secureTextEntry="YES"/>
+                            </textField>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l7F-qW-cQu">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <color key="barTintColor" red="0.5430313349" green="0.69132721419999998" blue="0.29515084619999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="0.86274509799999999" green="0.86274509799999999" blue="0.85490196080000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Studiportal Login" id="qqM-LF-KU1"/>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SXD-mC-ePq">
+                                <rect key="frame" x="16" y="156" width="568" height="30"/>
+                                <state key="normal" title="Einloggen">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6qo-ai-yev"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.86274509799999999" green="0.86274509799999999" blue="0.85490196080000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="hkL-gR-8tw" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="4Bp-l5-3FX"/>
+                            <constraint firstItem="XLA-FB-oyR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="5m6-pu-OZc"/>
+                            <constraint firstItem="SXD-mC-ePq" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Bhd-Fk-9eg"/>
+                            <constraint firstItem="WdC-fI-UlG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="Btw-il-qVq"/>
+                            <constraint firstItem="hkL-gR-8tw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Eku-1S-7Ba"/>
+                            <constraint firstItem="SXD-mC-ePq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="I8h-En-Ee0"/>
+                            <constraint firstItem="hkL-gR-8tw" firstAttribute="top" secondItem="XLA-FB-oyR" secondAttribute="bottom" constant="8" id="LdE-oe-0qa"/>
+                            <constraint firstItem="WdC-fI-UlG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="QF1-5m-ypf"/>
+                            <constraint firstItem="l7F-qW-cQu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="gJc-o2-hbk"/>
+                            <constraint firstItem="l7F-qW-cQu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="hTL-wr-eKR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="l7F-qW-cQu" secondAttribute="trailing" constant="-16" id="nha-Tz-8L5"/>
+                            <constraint firstItem="XLA-FB-oyR" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="njq-Tm-RVk"/>
+                            <constraint firstItem="SXD-mC-ePq" firstAttribute="top" secondItem="hkL-gR-8tw" secondAttribute="bottom" constant="8" id="o9Z-Vq-UY6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WdC-fI-UlG" secondAttribute="trailing" constant="-16" id="sgP-rv-AIQ"/>
+                            <constraint firstItem="XLA-FB-oyR" firstAttribute="top" secondItem="l7F-qW-cQu" secondAttribute="bottom" constant="16" id="tTu-dU-1Id"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textViewPassword" destination="hkL-gR-8tw" id="ath-2k-xB9"/>
+                        <outlet property="textViewUser" destination="XLA-FB-oyR" id="oQQ-CP-uw7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="439.5" y="415"/>
+            <point key="canvasLocation" x="196" y="131"/>
         </scene>
     </scenes>
 </document>
