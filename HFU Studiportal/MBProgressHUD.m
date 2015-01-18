@@ -174,10 +174,10 @@ static const CGFloat kDetailsLabelFontSize = 12.f;
 		self.opacity = 0.8f;
 		self.color = nil;
 		self.labelFont = [UIFont boldSystemFontOfSize:kLabelFontSize];
-		self.labelColor = [UIColor whiteColor];
+		self.labelColor = [UIColor blackColor];
 		self.detailsLabelFont = [UIFont boldSystemFontOfSize:kDetailsLabelFontSize];
-		self.detailsLabelColor = [UIColor whiteColor];
-		self.activityIndicatorColor = [UIColor whiteColor];
+		self.detailsLabelColor = [UIColor darkGrayColor];
+		self.activityIndicatorColor = [UIColor blackColor];
 		self.xOffset = 0.0f;
 		self.yOffset = 0.0f;
 		self.dimBackground = NO;
@@ -619,29 +619,15 @@ static const CGFloat kDetailsLabelFontSize = 12.f;
 	UIGraphicsPushContext(context);
 
 	if (self.dimBackground) {
-		//Gradient colours
-		size_t gradLocationsNum = 2;
-		CGFloat gradLocations[2] = {0.0f, 1.0f};
-		CGFloat gradColors[8] = {0.0f,0.0f,0.0f,0.0f,0.0f,0.0f,0.0f,0.75f}; 
-		CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
-		CGGradientRef gradient = CGGradientCreateWithColorComponents(colorSpace, gradColors, gradLocations, gradLocationsNum);
-		CGColorSpaceRelease(colorSpace);
-		//Gradient center
-		CGPoint gradCenter= CGPointMake(self.bounds.size.width/2, self.bounds.size.height/2);
-		//Gradient radius
-		float gradRadius = MIN(self.bounds.size.width , self.bounds.size.height) ;
-		//Gradient draw
-		CGContextDrawRadialGradient (context, gradient, gradCenter,
-									 0, gradCenter, gradRadius,
-									 kCGGradientDrawsAfterEndLocation);
-		CGGradientRelease(gradient);
+        CGContextSetRGBFillColor(context, 0.f, 0.f, 0.f, .3f);
+        CGContextFillRect(context, rect);
 	}
 
 	// Set background rect color
 	if (self.color) {
 		CGContextSetFillColorWithColor(context, self.color.CGColor);
 	} else {
-		CGContextSetGrayFillColor(context, 0.0f, self.opacity);
+		CGContextSetGrayFillColor(context, 255.0f, self.opacity);
 	}
 
 	
