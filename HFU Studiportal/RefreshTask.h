@@ -6,37 +6,18 @@
 //  Copyright (c) 2015 Hochschule Furtwangen University. All rights reserved.
 //
 
-#include <string>
-#include "DialogHost.h"
-#include "NotificationHost.h"
+#import <Foundation/Foundation.h>
+#import "DialogHostViewController.h"
+#import "NotificationHost.h"
 
-#ifndef HFU_Studiportal_RefreshTask_h
-#define HFU_Studiportal_RefreshTask_h
 
-#define URL_LOGIN   "https://studi-portal.hs-furtwangen.de/qisserver/rds?state=user&type=1&category=auth.login&startpage=portal.vm&breadCrumbSource=portal"
-#define URL_LOGOUT  "https://studi-portal.hs-furtwangen.de/qisserver/rds?state=user&type=4&re=last&category=auth.logout&breadCrumbSource=portal"
-#define URL_OBSERVE "https://studi-portal.hs-furtwangen.de/qisserver/rds?state=htmlbesch&moduleParameter=Student&menuid=notenspiegel&breadcrumb=notenspiegel&breadCrumbSource=menu&asi=%s"
+@interface RefreshTask : NSObject
 
-class RefreshTask {
-    std::string userName;
-    std::string password;
-    DialogHost *dialogHost;
-    NotificationHost *notificationhost;
-    
-    void onPreExecute();
-    void doInBackground();
-    void onPostExecute();
-    void login();
-    void logout();
-    void checkDataChange();
-    std::string sendPost(std::string url, std::string params);
-    std::string sendGet(std::string url);
-    
-public:
-    RefreshTask(std::string user, std::string password, DialogHost* dialogHost, NotificationHost* notificationHost) :
-        userName(user), password(password), dialogHost(dialogHost), notificationhost(notificationHost) {}
-    void start();
-    
-};
+@property NSString *userName;
+@property NSString *password;
+@property DialogHostViewController *dialogHost;
 
-#endif
+-(id) initWithUserName:(NSString*)userName Password:(NSString*)password DialogHost:(DialogHostViewController*) dialogHost;
+-(void) start;
+
+@end

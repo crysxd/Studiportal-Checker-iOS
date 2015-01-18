@@ -8,14 +8,14 @@
 
 #import "NotificationHost.h"
 
-void NotificationHost::showNotification(std::string title, std::string text) {
-    NSString *nstitle = [NSString stringWithUTF8String: title.c_str()];
-    NSString *nstext = [NSString stringWithUTF8String: text.c_str()];
-    NSString *body = [NSString stringWithFormat:@"%@: %@", nstitle, nstext ];
+@implementation NotificationHost
+
+-(void) showNotificationWithTitle:(NSString*)title andText:(NSString*) text {
+    NSString *body = [NSString stringWithFormat:@"%@: %@", title, text];
     
     NSDictionary *data  = [[NSDictionary alloc] initWithObjectsAndKeys:
-                           nstitle, @"title",
-                           nstext, @"text",
+                           title, @"title",
+                           text, @"text",
                            nil];
     
     UILocalNotification *notification = [[UILocalNotification alloc]init];
@@ -27,3 +27,5 @@ void NotificationHost::showNotification(std::string title, std::string text) {
     [[UIApplication sharedApplication] setScheduledLocalNotifications:[NSArray arrayWithObject:notification]];
     
 }
+
+@end

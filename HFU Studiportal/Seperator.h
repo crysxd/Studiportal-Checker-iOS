@@ -6,14 +6,8 @@
 //  Copyright (c) 2015 Hochschule Furtwangen University. All rights reserved.
 //
 
-#ifndef HFU_Studiportal_Seperator_h
-#define HFU_Studiportal_Seperator_h
+#import "Exam.h"
 
-class Seperator : public Exam {
-    Seperator() {
-        this->Exam::Exam("Seperator");
-        
-    }
-};
+@interface Seperator : Exam
 
-#endif
+@end

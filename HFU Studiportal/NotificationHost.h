@@ -6,15 +6,10 @@
 //  Copyright (c) 2015 Hochschule Furtwangen University. All rights reserved.
 //
 
-#include <string>
 #import <UIKit/UIKit.h>
 
-#ifndef HFU_Studiportal_NotificationHost_h
-#define HFU_Studiportal_NotificationHost_h
+@interface NotificationHost : NSObject
 
-class NotificationHost {
-public:
-    void showNotification(std::string title, std::string text);
+-(void) showNotificationWithTitle:(NSString*)title andText:(NSString*) text;
 
-};
-#endif
+@end

@@ -23,9 +23,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    DialogHost *host = new DialogHost(self.view);
-    RefreshTask t("user", "password", host, NULL);
-    t.start();
+    RefreshTask* task = [[RefreshTask alloc] initWithUserName:@"user" Password:@"pass" DialogHost:self];
+    [task start];
     
 }
 

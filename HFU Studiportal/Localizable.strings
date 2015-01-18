@@ -6,13 +6,18 @@
   Copyright (c) 2015 Hochschule Furtwangen University. All rights reserved.
 */
 
-"exam.state.be"     = "Bestanden";
-"exam.state.an"     = "Angemeldet";
-"exam.state.nb"     = "Nicht bestanden";
-"exam.state.en"     = "Endgültig nicht bestanden";
-"exam.note.gr"      = "Gehnehmigter Rücktritt";
-"exam.note.u"       = "Unetschuldigter Rücktritt";
-"exam.note.vl"      = "Prüfungsvorleistung fehlt";
-"exam.note.k"       = "Krankheit";
-"exam.note.sa"      = "Studium abgebrochen";
-"dialog.name.error" = "Fehler";
+"exam.state.be"                     = "Bestanden";
+"exam.state.an"                     = "Angemeldet";
+"exam.state.nb"                     = "Nicht bestanden";
+"exam.state.en"                     = "Endgültig nicht bestanden";
+"exam.note.gr"                      = "Gehnehmigter Rücktritt";
+"exam.note.u"                       = "Unetschuldigter Rücktritt";
+"exam.note.vl"                      = "Prüfungsvorleistung fehlt";
+"exam.note.k"                       = "Krankheit";
+"exam.note.sa"                      = "Studium abgebrochen";
+"dialog.name.error"                 = "Fehler";
+"dialog.name.refresh"               = "Überprüfe Studiportal";
+"dialog.text.refresh.login"         = "Einloggen...";
+"dialog.text.refresh.logout"        = "Ausloggen...";
+"dialog.text.refresh.check"         = "Nach Änderungen suchen...";
+"dialog.button.ok"                  = "OK";

@@ -7,21 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		604F0A361A68226B00E0BB07 /* Exam.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 604F0A351A68226B00E0BB07 /* Exam.cpp */; };
+		604F0A361A68226B00E0BB07 /* Exam.m in Sources */ = {isa = PBXBuildFile; fileRef = 604F0A351A68226B00E0BB07 /* Exam.m */; };
 		604F0A391A6827B400E0BB07 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 604F0A381A6827B400E0BB07 /* Localizable.strings */; };
-		604F0A3B1A682D3C00E0BB07 /* LocalStrings.mm in Sources */ = {isa = PBXBuildFile; fileRef = 604F0A3A1A682D3C00E0BB07 /* LocalStrings.mm */; };
 		6064E6A41A66B9D3000B7DDC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6064E6A31A66B9D3000B7DDC /* main.m */; };
 		6064E6A71A66B9D3000B7DDC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6064E6A61A66B9D3000B7DDC /* AppDelegate.m */; };
-		6064E6AA1A66B9D3000B7DDC /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6064E6A91A66B9D3000B7DDC /* ViewController.mm */; };
+		6064E6AA1A66B9D3000B7DDC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6064E6A91A66B9D3000B7DDC /* ViewController.m */; };
 		6064E6AD1A66B9D3000B7DDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6064E6AB1A66B9D3000B7DDC /* Main.storyboard */; };
 		6064E6AF1A66B9D3000B7DDC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6064E6AE1A66B9D3000B7DDC /* Images.xcassets */; };
 		6064E6B21A66B9D3000B7DDC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6064E6B01A66B9D3000B7DDC /* LaunchScreen.xib */; };
 		6064E6BE1A66B9D3000B7DDC /* HFU_StudiportalTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6064E6BD1A66B9D3000B7DDC /* HFU_StudiportalTests.mm */; };
-		607950A41A6A9509003B1280 /* NotificationHost.mm in Sources */ = {isa = PBXBuildFile; fileRef = 607950A31A6A9509003B1280 /* NotificationHost.mm */; };
-		607950A81A6A95F6003B1280 /* DialogHost.mm in Sources */ = {isa = PBXBuildFile; fileRef = 607950A71A6A95F6003B1280 /* DialogHost.mm */; };
+		607950A41A6A9509003B1280 /* NotificationHost.m in Sources */ = {isa = PBXBuildFile; fileRef = 607950A31A6A9509003B1280 /* NotificationHost.m */; };
+		607950A81A6A95F6003B1280 /* DialogHostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 607950A71A6A95F6003B1280 /* DialogHostViewController.m */; };
 		607950AB1A6A967F003B1280 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 607950AA1A6A967F003B1280 /* MBProgressHUD.m */; };
-		607950AE1A6A973B003B1280 /* RefreshTask.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 607950AC1A6A973B003B1280 /* RefreshTask.cpp */; };
-		60983E7E1A696A5500DA4835 /* ExamCategory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 60983E7D1A696A5500DA4835 /* ExamCategory.cpp */; };
+		607950AE1A6A973B003B1280 /* RefreshTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 607950AC1A6A973B003B1280 /* RefreshTask.m */; };
+		60983E7E1A696A5500DA4835 /* ExamCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 60983E7D1A696A5500DA4835 /* ExamCategory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,18 +34,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		604F0A341A68211100E0BB07 /* Exam.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; path = Exam.h; sourceTree = "<group>"; };
-		604F0A351A68226B00E0BB07 /* Exam.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Exam.cpp; sourceTree = "<group>"; };
-		604F0A371A68267B00E0BB07 /* LocalStrings.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; path = LocalStrings.h; sourceTree = "<group>"; };
+		604F0A341A68211100E0BB07 /* Exam.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Exam.h; sourceTree = "<group>"; };
+		604F0A351A68226B00E0BB07 /* Exam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Exam.m; sourceTree = "<group>"; };
 		604F0A381A6827B400E0BB07 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
-		604F0A3A1A682D3C00E0BB07 /* LocalStrings.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LocalStrings.mm; sourceTree = "<group>"; };
 		6064E69E1A66B9D3000B7DDC /* HFU Studiportal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HFU Studiportal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6064E6A21A66B9D3000B7DDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6064E6A31A66B9D3000B7DDC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6064E6A51A66B9D3000B7DDC /* AppDelegate.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6064E6A61A66B9D3000B7DDC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		6064E6A81A66B9D3000B7DDC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		6064E6A91A66B9D3000B7DDC /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
+		6064E6A91A66B9D3000B7DDC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		6064E6AC1A66B9D3000B7DDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6064E6AE1A66B9D3000B7DDC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6064E6B11A66B9D3000B7DDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -54,15 +51,15 @@
 		6064E6BC1A66B9D3000B7DDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6064E6BD1A66B9D3000B7DDC /* HFU_StudiportalTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = HFU_StudiportalTests.mm; sourceTree = "<group>"; };
 		607950A21A6A9509003B1280 /* NotificationHost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationHost.h; sourceTree = "<group>"; };
-		607950A31A6A9509003B1280 /* NotificationHost.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NotificationHost.mm; sourceTree = "<group>"; };
-		607950A61A6A95DE003B1280 /* DialogHost.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DialogHost.h; sourceTree = "<group>"; };
-		607950A71A6A95F6003B1280 /* DialogHost.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = DialogHost.mm; sourceTree = "<group>"; };
+		607950A31A6A9509003B1280 /* NotificationHost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationHost.m; sourceTree = "<group>"; };
+		607950A61A6A95DE003B1280 /* DialogHostViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DialogHostViewController.h; sourceTree = "<group>"; };
+		607950A71A6A95F6003B1280 /* DialogHostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DialogHostViewController.m; sourceTree = "<group>"; };
 		607950A91A6A967F003B1280 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		607950AA1A6A967F003B1280 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
-		607950AC1A6A973B003B1280 /* RefreshTask.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = RefreshTask.cpp; sourceTree = "<group>"; };
+		607950AC1A6A973B003B1280 /* RefreshTask.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = RefreshTask.m; sourceTree = "<group>"; };
 		607950AD1A6A973B003B1280 /* RefreshTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefreshTask.h; sourceTree = "<group>"; };
 		60983E7C1A6968B500DA4835 /* ExamCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExamCategory.h; sourceTree = "<group>"; };
-		60983E7D1A696A5500DA4835 /* ExamCategory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ExamCategory.cpp; sourceTree = "<group>"; };
+		60983E7D1A696A5500DA4835 /* ExamCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExamCategory.m; sourceTree = "<group>"; };
 		60983E7F1A696FC500DA4835 /* Seperator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Seperator.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,12 +85,10 @@
 			isa = PBXGroup;
 			children = (
 				604F0A341A68211100E0BB07 /* Exam.h */,
-				604F0A351A68226B00E0BB07 /* Exam.cpp */,
+				604F0A351A68226B00E0BB07 /* Exam.m */,
 				60983E7C1A6968B500DA4835 /* ExamCategory.h */,
-				60983E7D1A696A5500DA4835 /* ExamCategory.cpp */,
+				60983E7D1A696A5500DA4835 /* ExamCategory.m */,
 				60983E7F1A696FC500DA4835 /* Seperator.h */,
-				604F0A371A68267B00E0BB07 /* LocalStrings.h */,
-				604F0A3A1A682D3C00E0BB07 /* LocalStrings.mm */,
 			);
 			name = data;
 			sourceTree = "<group>";
@@ -125,7 +120,7 @@
 				6064E6A51A66B9D3000B7DDC /* AppDelegate.h */,
 				6064E6A61A66B9D3000B7DDC /* AppDelegate.m */,
 				6064E6A81A66B9D3000B7DDC /* ViewController.h */,
-				6064E6A91A66B9D3000B7DDC /* ViewController.mm */,
+				6064E6A91A66B9D3000B7DDC /* ViewController.m */,
 				6064E6AB1A66B9D3000B7DDC /* Main.storyboard */,
 				6064E6AE1A66B9D3000B7DDC /* Images.xcassets */,
 				6064E6B01A66B9D3000B7DDC /* LaunchScreen.xib */,
@@ -164,12 +159,12 @@
 		607950A51A6A9515003B1280 /* view */ = {
 			isa = PBXGroup;
 			children = (
-				607950A61A6A95DE003B1280 /* DialogHost.h */,
-				607950A71A6A95F6003B1280 /* DialogHost.mm */,
+				607950A61A6A95DE003B1280 /* DialogHostViewController.h */,
+				607950A71A6A95F6003B1280 /* DialogHostViewController.m */,
 				607950A91A6A967F003B1280 /* MBProgressHUD.h */,
 				607950AA1A6A967F003B1280 /* MBProgressHUD.m */,
 				607950A21A6A9509003B1280 /* NotificationHost.h */,
-				607950A31A6A9509003B1280 /* NotificationHost.mm */,
+				607950A31A6A9509003B1280 /* NotificationHost.m */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -177,8 +172,8 @@
 		607950B01A6A9F25003B1280 /* network */ = {
 			isa = PBXGroup;
 			children = (
-				607950AC1A6A973B003B1280 /* RefreshTask.cpp */,
 				607950AD1A6A973B003B1280 /* RefreshTask.h */,
+				607950AC1A6A973B003B1280 /* RefreshTask.m */,
 			);
 			name = network;
 			sourceTree = "<group>";
@@ -284,16 +279,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				604F0A361A68226B00E0BB07 /* Exam.cpp in Sources */,
-				6064E6AA1A66B9D3000B7DDC /* ViewController.mm in Sources */,
-				60983E7E1A696A5500DA4835 /* ExamCategory.cpp in Sources */,
-				607950A41A6A9509003B1280 /* NotificationHost.mm in Sources */,
-				607950AE1A6A973B003B1280 /* RefreshTask.cpp in Sources */,
+				604F0A361A68226B00E0BB07 /* Exam.m in Sources */,
+				6064E6AA1A66B9D3000B7DDC /* ViewController.m in Sources */,
+				60983E7E1A696A5500DA4835 /* ExamCategory.m in Sources */,
+				607950A41A6A9509003B1280 /* NotificationHost.m in Sources */,
+				607950AE1A6A973B003B1280 /* RefreshTask.m in Sources */,
 				607950AB1A6A967F003B1280 /* MBProgressHUD.m in Sources */,
 				6064E6A71A66B9D3000B7DDC /* AppDelegate.m in Sources */,
-				607950A81A6A95F6003B1280 /* DialogHost.mm in Sources */,
+				607950A81A6A95F6003B1280 /* DialogHostViewController.m in Sources */,
 				6064E6A41A66B9D3000B7DDC /* main.m in Sources */,
-				604F0A3B1A682D3C00E0BB07 /* LocalStrings.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
