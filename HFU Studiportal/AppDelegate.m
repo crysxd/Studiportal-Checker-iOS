@@ -51,7 +51,7 @@
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[notification.userInfo objectForKey: @"title"]
                                                     message:[notification.userInfo objectForKey: @"text"]
                                                    delegate:nil
-                                          cancelButtonTitle:@"OK"
+                                          cancelButtonTitle:NSLocalizedString(@"dialog.button.ok", nil)
                                           otherButtonTitles:nil];
     [alert show];
 
