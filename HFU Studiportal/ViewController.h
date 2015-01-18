@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "RefreshTask.h"
 
-@interface ViewController : DialogHostViewController
+@interface ViewController : DialogHostViewController <RefreshTaskDelegate>
 
 - (IBAction)loginAction:(id)sender;
 @property (weak, nonatomic) IBOutlet UITextField *textViewUser;

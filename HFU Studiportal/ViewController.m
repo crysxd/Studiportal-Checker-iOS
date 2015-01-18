@@ -34,13 +34,17 @@
 }
 
 - (IBAction)loginAction:(id)sender {
-    RefreshTask* task = [[RefreshTask alloc] initWithUserName:self.textViewUser.text Password:self.textViewPassword.text DialogHost:self];
+    RefreshTask* task = [[RefreshTask alloc] initWithUserName:self.textViewUser.text password:self.textViewPassword.text dialogHost:self delegate:self];
     [task start];
     
 }
 
 -(UIStatusBarStyle)preferredStatusBarStyle{
     return UIStatusBarStyleLightContent;
+}
+
+-(void)refreshCompleteWithError:(RefreshError *)error {
+    
 }
 
 @end
