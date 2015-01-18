@@ -24,3 +24,4 @@
 "refresh.error.no_change"           = "Keine neuen Noten gefunden";
 "refresh.error.login"               = "Benutzername oder Passwort falsch";
 "refresh.error.no_connection"       = "Verbindung mit Studiportal nicht möglich";
+"refresh.error.unknown"             = "Ein unbekannter Fehler ist aufgetreten";

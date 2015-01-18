@@ -10,6 +10,15 @@
 
 @implementation RefreshError
 
+-(id)init {
+    if(self.messageKey == nil) {
+        self.messageKey = @"refresh.error.unknown";
+    }
+    
+    return self;
+    
+}
+
 -(id)initWithMessageKey:(NSString *)key {
     self.messageKey = key;
     return self;
