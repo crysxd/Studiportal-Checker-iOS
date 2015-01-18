@@ -12,11 +12,11 @@
 
 -(void) start0;
 -(void) onPreExecute;
--(void) doInBackground;
--(void) onPostExecute;
--(void) login;
+-(RefreshError*) doInBackground;
+-(void) onPostExecute:(RefreshError*) occuredError;
+-(RefreshError*) login;
 -(void) logout;
--(void) checkDataChange;
+-(RefreshError*) checkDataChange;
 -(NSString*) sendPostToURL:(NSString*)url withParams:(NSString*)params;
 -(NSString*) sendGetToURL:(NSString*) url;
 
@@ -24,10 +24,11 @@
 
 @implementation RefreshTask
 
--(id) initWithUserName:(NSString*)userName Password:(NSString*)password DialogHost:(DialogHostViewController*) dialogHost {
+-(id) initWithUserName:(NSString*)userName password:(NSString*)password dialogHost:(DialogHostViewController*)dialogHost delegate:(id<RefreshTaskDelegate>)delegate {
     self.userName = userName;
     self.password = password;
     self.dialogHost = dialogHost;
+    self.delegate = delegate;
     
     return self;
     
@@ -40,8 +41,8 @@
 
 -(void)start0 {
     [self onPreExecute];
-    [self doInBackground];
-    [self onPostExecute];
+    RefreshError *occuredError = [self doInBackground];
+    [self onPostExecute: occuredError];
     
 }
 
@@ -49,43 +50,79 @@
     
 }
 
--(void) doInBackground {
-    [self login];
-    [self checkDataChange];
+-(RefreshError*) doInBackground {
+    RefreshError *occuredError = nil;
+    
+    occuredError = [self login];
+    
+    if(occuredError != nil)
+        return occuredError;
+    
+    occuredError = [self checkDataChange];
+    
+    if(occuredError != nil)
+        return occuredError;
+    
     [self logout];
 
+    return nil;
+    
 }
 
--(void) onPostExecute {
+-(void) onPostExecute:(RefreshError*) occuredError{
     if(self.dialogHost != nil) {
         [self.dialogHost cancelProgressDialog];
         
+        if(occuredError != nil && [occuredError class] != [NoChangeRefreshError class]) {
+            [self.dialogHost showErrorDialogWithMessage:occuredError.localizedMessage];
+            
+        }
     }
     
-    NotificationHost* host = [[NotificationHost alloc] init];
-    [host showNotificationWithTitle:@"Formale Sprachen" andText:@"1,0 - Bestanden"];
-    
+    if(self.delegate != nil) {
+        [self.delegate refreshCompleteWithError:occuredError];
+        
+    }
 }
 
--(void) login {
+-(RefreshError*) login {
     if(self.dialogHost != nil) {
         [self.dialogHost showIndeterminateProgressDialogWithTitle:NSLocalizedString(@"dialog.name.refresh", nil) andText:NSLocalizedString(@"dialog.text.refresh.login", nil)];
         
     }
     
-    //TODO CHECK IF USERNAME OR PASSWORD IS EMPTY, RASISE EXCEPTION IF TRUE
+    if(self.userName == nil || self.password == nil || self.userName.length == 0 || self.password.length == 0) {
+        return [[LoginRefreshError alloc] init];
+        
+    }
     
     NSString *params = [NSString stringWithFormat:@"%@=%@&%@=%@", @"asdf", self.userName, @"fdsa", self.password];
     NSString *response = [self sendPostToURL:URL_LOGIN withParams:params];
     
+    if(response.length == 0) {
+        return [[NoConnectinonRefreshError alloc] init];
+        
+    }
+    
     NSRange range = [response rangeOfString:@";asi="];
+    
+    if(range.location == NSNotFound) {
+        return [[LoginRefreshError alloc] init];
+        
+    }
+    
     NSUInteger start = NSMaxRange(range);
     range = [response rangeOfString:@"\"" options:0 range:NSMakeRange(start, 1024)];
     NSUInteger end = range.location;
     self.asi = [response substringWithRange:NSMakeRange(start, end-start)];
     NSLog(@"asi:\n%@", self.asi);
 
-    //TODO CHECK IF RESPONSE CONTAINS "ANMELDUNG FEHLGESCHLAGEN"
+    if([response rangeOfString:@"Anmeldung Fehlgeschlagen" options:NSCaseInsensitiveSearch].location != NSNotFound) {
+        return [[LoginRefreshError alloc] init];
+
+    }
+    
+    return nil;
     
 }
 
@@ -99,14 +136,21 @@
     
 }
 
--(void) checkDataChange {
+-(RefreshError*) checkDataChange {
     if(self.dialogHost != nil) {
         [self.dialogHost showIndeterminateProgressDialogWithTitle:NSLocalizedString(@"dialog.name.refresh", nil) andText:NSLocalizedString(@"dialog.text.refresh.check", nil)];
         
     }
     
     NSString *response = [self sendGetToURL:[NSString stringWithFormat:URL_OBSERVE, self.asi]];
-    NSLog(@"Response:\n%@", response);
+    
+    if(response.length == 0) {
+        return [[NoConnectinonRefreshError alloc] init];
+        
+    }
+    
+    
+    return [[NoChangeRefreshError alloc] init];
     
 }
 
