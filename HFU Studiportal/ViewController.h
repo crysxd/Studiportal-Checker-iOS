@@ -11,6 +11,9 @@
 
 @interface ViewController : DialogHostViewController
 
+- (IBAction)loginAction:(id)sender;
+@property (weak, nonatomic) IBOutlet UITextField *textViewUser;
+@property (weak, nonatomic) IBOutlet UITextField *textViewPassword;
 
 @end
 

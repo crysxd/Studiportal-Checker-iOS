@@ -16,21 +16,31 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear: animated];
-    
+
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    [self setNeedsStatusBarAppearanceUpdate];
     
-    RefreshTask* task = [[RefreshTask alloc] initWithUserName:@"user" Password:@"pass" DialogHost:self];
-    [task start];
+    // Do any additional setup after loading the view, typically from a nib.
     
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+    
+}
+
+- (IBAction)loginAction:(id)sender {
+    RefreshTask* task = [[RefreshTask alloc] initWithUserName:self.textViewUser.text Password:self.textViewPassword.text DialogHost:self];
+    [task start];
+    
+}
+
+-(UIStatusBarStyle)preferredStatusBarStyle{
+    return UIStatusBarStyleLightContent;
 }
 
 @end
