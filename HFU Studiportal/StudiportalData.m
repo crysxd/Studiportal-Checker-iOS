@@ -160,7 +160,7 @@
     
 }
 
--(ExamCategory*) getCategory:(NSUInteger)index {
+-(ExamCategory*) category:(NSUInteger)index {
     return [self.categoryList objectAtIndex:index];
     
 }

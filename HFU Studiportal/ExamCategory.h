@@ -17,8 +17,8 @@
 -(id) initWithCategoryName:(NSString*) categoryName;
 -(void) addExam:(Exam*) exam;
 -(void) removeExam:(Exam*) exam;
--(NSUInteger) getExamCount;
--(Exam*) getExam:(NSUInteger) index;
--(NSArray*) getAllExams;
+-(NSUInteger) examCount;
+-(Exam*) exam:(NSUInteger) index;
+-(NSArray*) allExams;
 
 @end

@@ -31,6 +31,6 @@
 -(void) removeCategory:(ExamCategory*)category;
 -(void) removeCategoryWithIndex:(NSUInteger)index;
 -(NSUInteger) categoryCount;
--(ExamCategory*) getCategory:(NSUInteger)index;
+-(ExamCategory*) category:(NSUInteger)index;
 
 @end

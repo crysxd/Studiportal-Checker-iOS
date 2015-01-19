@@ -32,17 +32,17 @@
     
 }
 
--(NSUInteger)getExamCount {
+-(NSUInteger)examCount {
     return [self.examList count];
     
 }
 
--(id)getExam:(NSUInteger)index {
+-(id)exam:(NSUInteger)index {
     return [self.examList objectAtIndex:index];
     
 }
 
--(NSArray *)getAllExams {
+-(NSArray *)allExams {
     return [self.examList copy];
     
 }
