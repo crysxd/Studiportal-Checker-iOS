@@ -17,6 +17,7 @@
 -(void)loadView {
     [super loadView];
     self.loggedIn = [[[LoginStorage alloc] init] isLoggedIn];
+    self.data = [[StudiportalData alloc] initFromDisk];
 
 }
 
@@ -26,6 +27,8 @@
     
     RefreshTask *task = [[RefreshTask alloc] initWithDialogHost:nil delegate:self];
     [task start];
+    
+    
     
 }
 
@@ -65,5 +68,35 @@
     [task start];
     
 }
+
+-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    return [self.data category:section].categoryName;
+    
+}
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return self.data.categoryCount;
+    
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [self.data category:section].examCount;
+    
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *simpleTableIdentifier = @"SimpleTableItem";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+    }
+    
+    cell.textLabel.text = [[self.data category:indexPath.section] exam:indexPath.row].name;
+    return cell;
+    
+}
+
 @end
 

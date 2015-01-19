@@ -10,12 +10,15 @@
 #import "RefreshTask.h"
 #import "LoginStorage.h"
 
-@interface MainViewController : DialogHostViewController <RefreshTaskDelegate>
+@interface MainViewController : DialogHostViewController <RefreshTaskDelegate,  UITableViewDelegate, UITableViewDataSource>
 
 @property BOOL loggedIn;
+@property StudiportalData *data;
+
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *btRefresh;
 - (IBAction)refresh:(id)sender;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 -(void) showLogin;
+
 @end
