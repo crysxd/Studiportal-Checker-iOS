@@ -43,6 +43,7 @@
 -(void)refreshCompleteWithError:(RefreshError *)error {
     if(error == nil || [error class] == [NoChangeRefreshError class]) {
         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+            [[[LoginStorage alloc] init] saveUser:self.textViewUser.text password:self.textViewPassword.text];
             [self performSegueWithIdentifier:@"showMain" sender:self];
         
          }];

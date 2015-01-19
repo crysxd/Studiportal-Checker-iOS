@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "RefreshTask.h"
+#import "LoginStorage.h"
 
 @interface LoginViewController : DialogHostViewController <RefreshTaskDelegate>
 
