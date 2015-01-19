@@ -11,6 +11,7 @@
 #import "NotificationHost.h"
 #import "RefreshError.h"
 #import "StudiportalData.h"
+#import "LoginStorage.h"
 
 #define URL_LOGIN @"https://studi-portal.hs-furtwangen.de/qisserver/rds?state=user&type=1&category=auth.login&startpage=portal.vm&breadCrumbSource=portal"
 #define URL_LOGOUT @"https://studi-portal.hs-furtwangen.de/qisserver/rds?state=user&type=4&re=last&category=auth.logout&breadCrumbSource=portal"
@@ -30,6 +31,7 @@
 @property DialogHostViewController *dialogHost;
 @property id<RefreshTaskDelegate> delegate;
 
+-(id) initWithDialogHost:(DialogHostViewController*)dialogHost delegate:(id<RefreshTaskDelegate>)delegate;
 -(id) initWithUserName:(NSString*)userName password:(NSString*)password dialogHost:(DialogHostViewController*)dialogHost delegate:(id<RefreshTaskDelegate>)delegate;
 -(void) start;
 

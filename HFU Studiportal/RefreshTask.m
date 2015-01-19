@@ -24,6 +24,12 @@
 
 @implementation RefreshTask
 
+-(id) initWithDialogHost:(DialogHostViewController *)dialogHost delegate:(id<RefreshTaskDelegate>)delegate {
+    LoginStorage *storage = [[LoginStorage alloc] init];
+    return [self initWithUserName:storage.user password:storage.password dialogHost:dialogHost delegate:delegate];
+    
+}
+
 -(id) initWithUserName:(NSString*)userName password:(NSString*)password dialogHost:(DialogHostViewController*)dialogHost delegate:(id<RefreshTaskDelegate>)delegate {
     self.userName = userName;
     self.password = password;
@@ -164,9 +170,9 @@
 
     StudiportalData *newData = [[StudiportalData alloc] initWithHtmlTable:table];
     StudiportalData *oldData = [[StudiportalData alloc] initFromDisk];
+    [newData save];
     NSArray* changedExams = [newData findChangedExams:oldData];
-    
-    
+        
     if(changedExams.count == 0) {
         return [[NoChangeRefreshError alloc] init];
 
