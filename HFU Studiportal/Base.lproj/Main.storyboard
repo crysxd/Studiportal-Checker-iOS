@@ -119,6 +119,9 @@
                                 <color key="backgroundColor" red="0.5430313349" green="0.69132721419999998" blue="0.29515084619999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="gpe-mE-UM9" firstAttribute="leading" secondItem="T9y-xn-1CS" secondAttribute="leading" id="6ox-9g-Dnv"/>
+                                    <constraint firstItem="gpe-mE-UM9" firstAttribute="leading" secondItem="T9y-xn-1CS" secondAttribute="leading" id="LCV-mv-d11"/>
+                                    <constraint firstItem="gpe-mE-UM9" firstAttribute="top" relation="greaterThanOrEqual" secondItem="T9y-xn-1CS" secondAttribute="top" constant="20" id="UcQ-Lt-BeV"/>
+                                    <constraint firstAttribute="trailing" secondItem="gpe-mE-UM9" secondAttribute="trailing" id="csE-e4-nJC"/>
                                     <constraint firstItem="gpe-mE-UM9" firstAttribute="top" secondItem="T9y-xn-1CS" secondAttribute="top" constant="20" id="l6Y-NC-V7e"/>
                                     <constraint firstAttribute="trailing" secondItem="gpe-mE-UM9" secondAttribute="trailing" id="uG0-7D-dux"/>
                                 </constraints>
@@ -135,16 +138,21 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="oU9-WN-jfZ" id="SXa-ma-PMU"/>
+                                    <outlet property="delegate" destination="oU9-WN-jfZ" id="6d6-qf-MEj"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="8kW-gX-qMf" secondAttribute="trailing" constant="-16" id="FcR-f2-eMX"/>
-                            <constraint firstItem="T9y-xn-1CS" firstAttribute="top" secondItem="b8u-MF-bjb" secondAttribute="topMargin" id="R3J-kD-Ccd"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="T9y-xn-1CS" secondAttribute="trailing" constant="-16" id="Va3-4C-FHx"/>
-                            <constraint firstItem="8kW-gX-qMf" firstAttribute="leading" secondItem="b8u-MF-bjb" secondAttribute="leadingMargin" constant="-16" id="dA5-Ty-yUq"/>
-                            <constraint firstItem="T9y-xn-1CS" firstAttribute="leading" secondItem="b8u-MF-bjb" secondAttribute="leadingMargin" constant="-16" id="jEC-ri-Ujg"/>
-                            <constraint firstItem="8kW-gX-qMf" firstAttribute="top" secondItem="T9y-xn-1CS" secondAttribute="bottom" id="lHp-P2-v2g"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="T9y-xn-1CS" secondAttribute="trailing" constant="-16" id="9iZ-5Z-YPf"/>
+                            <constraint firstItem="T9y-xn-1CS" firstAttribute="top" secondItem="b8u-MF-bjb" secondAttribute="topMargin" id="AKy-0G-7NK"/>
+                            <constraint firstItem="8kW-gX-qMf" firstAttribute="top" secondItem="T9y-xn-1CS" secondAttribute="bottom" id="BEX-NP-kdU"/>
+                            <constraint firstItem="T9y-xn-1CS" firstAttribute="leading" secondItem="b8u-MF-bjb" secondAttribute="leadingMargin" constant="-16" id="Mh6-JX-5ch"/>
+                            <constraint firstItem="ILA-vu-hI7" firstAttribute="top" secondItem="8kW-gX-qMf" secondAttribute="bottom" id="Zqz-tA-yPK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8kW-gX-qMf" secondAttribute="trailing" constant="-16" id="dnA-Bk-cnJ"/>
+                            <constraint firstItem="8kW-gX-qMf" firstAttribute="leading" secondItem="b8u-MF-bjb" secondAttribute="leadingMargin" constant="-16" id="x5C-Jf-7iD"/>
                         </constraints>
                     </view>
                     <connections>
