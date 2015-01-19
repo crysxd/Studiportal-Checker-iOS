@@ -6,13 +6,9 @@
 //  Copyright (c) 2015 Hochschule Furtwangen University. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "LoginViewController.h"
 
-@interface ViewController ()
-
-@end
-
-@implementation ViewController
+@implementation LoginViewController
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear: animated];

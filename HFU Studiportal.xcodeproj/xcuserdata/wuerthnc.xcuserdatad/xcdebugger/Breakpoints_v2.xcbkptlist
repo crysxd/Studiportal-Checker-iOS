@@ -34,12 +34,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "HFU Studiportal/ViewController.m"
-            timestampString = "443278092.399236"
+            filePath = "HFU Studiportal/LoginViewController.m"
+            timestampString = "443380008.173093"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
             landmarkName = "-loginAction:"
             landmarkType = "5">
          </BreakpointContent>

@@ -6,10 +6,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WdC-fI-UlG">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WdC-fI-UlG">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
                                 <color key="backgroundColor" red="0.5430313349" green="0.69132721419999998" blue="0.29515084619999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
@@ -61,6 +61,7 @@
                             <constraint firstItem="hkL-gR-8tw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Eku-1S-7Ba"/>
                             <constraint firstItem="SXD-mC-ePq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="I8h-En-Ee0"/>
                             <constraint firstItem="hkL-gR-8tw" firstAttribute="top" secondItem="XLA-FB-oyR" secondAttribute="bottom" constant="8" id="LdE-oe-0qa"/>
+                            <constraint firstItem="WdC-fI-UlG" firstAttribute="bottom" secondItem="l7F-qW-cQu" secondAttribute="bottom" id="N4z-ET-dUf"/>
                             <constraint firstItem="WdC-fI-UlG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="QF1-5m-ypf"/>
                             <constraint firstItem="l7F-qW-cQu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="gJc-o2-hbk"/>
                             <constraint firstItem="l7F-qW-cQu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="hTL-wr-eKR"/>
