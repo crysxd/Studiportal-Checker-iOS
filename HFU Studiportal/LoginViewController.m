@@ -37,10 +37,16 @@
 
 -(UIStatusBarStyle)preferredStatusBarStyle{
     return UIStatusBarStyleLightContent;
+
 }
 
 -(void)refreshCompleteWithError:(RefreshError *)error {
-    
+    if(error == nil || [error class] == [NoChangeRefreshError class]) {
+        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+            [self performSegueWithIdentifier:@"showMain" sender:self];
+        
+         }];
+    }
 }
 
 @end
