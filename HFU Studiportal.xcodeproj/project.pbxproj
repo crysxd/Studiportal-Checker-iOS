@@ -27,6 +27,7 @@
 		607950D11A6C3814003B1280 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 607950CE1A6C3814003B1280 /* XPathQuery.m */; };
 		607950D31A6C42B5003B1280 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 607950D21A6C42B5003B1280 /* libxml2.dylib */; };
 		607950D51A6C449A003B1280 /* Seperator.m in Sources */ = {isa = PBXBuildFile; fileRef = 607950D41A6C449A003B1280 /* Seperator.m */; };
+		607950D81A6D72CA003B1280 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 607950D71A6D72CA003B1280 /* MainViewController.m */; };
 		60983E7E1A696A5500DA4835 /* ExamCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 60983E7D1A696A5500DA4835 /* ExamCategory.m */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +78,8 @@
 		607950CE1A6C3814003B1280 /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPathQuery.m; sourceTree = "<group>"; };
 		607950D21A6C42B5003B1280 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		607950D41A6C449A003B1280 /* Seperator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Seperator.m; sourceTree = "<group>"; };
+		607950D61A6D72C1003B1280 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		607950D71A6D72CA003B1280 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		60983E7C1A6968B500DA4835 /* ExamCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExamCategory.h; sourceTree = "<group>"; };
 		60983E7D1A696A5500DA4835 /* ExamCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExamCategory.m; sourceTree = "<group>"; };
 		60983E7F1A696FC500DA4835 /* Seperator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Seperator.h; sourceTree = "<group>"; };
@@ -146,6 +149,8 @@
 				6064E6A61A66B9D3000B7DDC /* AppDelegate.m */,
 				6064E6A81A66B9D3000B7DDC /* LoginViewController.h */,
 				6064E6A91A66B9D3000B7DDC /* LoginViewController.m */,
+				607950D61A6D72C1003B1280 /* MainViewController.h */,
+				607950D71A6D72CA003B1280 /* MainViewController.m */,
 				6064E6AB1A66B9D3000B7DDC /* Main.storyboard */,
 				6064E6AE1A66B9D3000B7DDC /* Images.xcassets */,
 				6064E6B01A66B9D3000B7DDC /* LaunchScreen.xib */,
@@ -322,6 +327,7 @@
 				604F0A361A68226B00E0BB07 /* Exam.m in Sources */,
 				6064E6AA1A66B9D3000B7DDC /* LoginViewController.m in Sources */,
 				607950D51A6C449A003B1280 /* Seperator.m in Sources */,
+				607950D81A6D72CA003B1280 /* MainViewController.m in Sources */,
 				60983E7E1A696A5500DA4835 /* ExamCategory.m in Sources */,
 				607950D01A6C3814003B1280 /* TFHppleElement.m in Sources */,
 				607950C71A6C37AA003B1280 /* StudiportalData.m in Sources */,

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="oU9-WN-jfZ">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
@@ -18,31 +18,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WdC-fI-UlG">
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WdC-fI-UlG">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
+                                <subviews>
+                                    <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l7F-qW-cQu">
+                                        <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                        <color key="barTintColor" red="0.5430313349" green="0.69132721419999998" blue="0.29515084619999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <textAttributes key="titleTextAttributes">
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </textAttributes>
+                                        <items>
+                                            <navigationItem title="Studiportal Login" id="qqM-LF-KU1"/>
+                                        </items>
+                                    </navigationBar>
+                                </subviews>
                                 <color key="backgroundColor" red="0.5430313349" green="0.69132721419999998" blue="0.29515084619999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="l7F-qW-cQu" firstAttribute="leading" secondItem="WdC-fI-UlG" secondAttribute="leading" id="cEF-E7-UuZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="l7F-qW-cQu" secondAttribute="trailing" id="tLh-a1-Msh"/>
+                                    <constraint firstItem="l7F-qW-cQu" firstAttribute="top" secondItem="WdC-fI-UlG" secondAttribute="top" constant="20" id="wxA-tk-MNO"/>
+                                </constraints>
                             </view>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Benutzername" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XLA-FB-oyR">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Benutzername" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XLA-FB-oyR">
                                 <rect key="frame" x="16" y="80" width="568" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Passwort" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hkL-gR-8tw">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Passwort" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hkL-gR-8tw">
                                 <rect key="frame" x="16" y="118" width="568" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="go" secureTextEntry="YES"/>
                             </textField>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l7F-qW-cQu">
-                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
-                                <color key="barTintColor" red="0.5430313349" green="0.69132721419999998" blue="0.29515084619999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <color key="textColor" red="0.86274509799999999" green="0.86274509799999999" blue="0.85490196080000003" alpha="1" colorSpace="calibratedRGB"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="Studiportal Login" id="qqM-LF-KU1"/>
-                                </items>
-                            </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SXD-mC-ePq">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SXD-mC-ePq">
                                 <rect key="frame" x="16" y="156" width="568" height="30"/>
                                 <state key="normal" title="Einloggen">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -54,32 +61,101 @@
                         </subviews>
                         <color key="backgroundColor" red="0.86274509799999999" green="0.86274509799999999" blue="0.85490196080000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="WdC-fI-UlG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="1eJ-cC-B1E"/>
                             <constraint firstItem="hkL-gR-8tw" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="4Bp-l5-3FX"/>
                             <constraint firstItem="XLA-FB-oyR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="5m6-pu-OZc"/>
                             <constraint firstItem="SXD-mC-ePq" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Bhd-Fk-9eg"/>
-                            <constraint firstItem="WdC-fI-UlG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="Btw-il-qVq"/>
                             <constraint firstItem="hkL-gR-8tw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Eku-1S-7Ba"/>
                             <constraint firstItem="SXD-mC-ePq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="I8h-En-Ee0"/>
                             <constraint firstItem="hkL-gR-8tw" firstAttribute="top" secondItem="XLA-FB-oyR" secondAttribute="bottom" constant="8" id="LdE-oe-0qa"/>
-                            <constraint firstItem="WdC-fI-UlG" firstAttribute="bottom" secondItem="l7F-qW-cQu" secondAttribute="bottom" id="N4z-ET-dUf"/>
-                            <constraint firstItem="WdC-fI-UlG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="QF1-5m-ypf"/>
-                            <constraint firstItem="l7F-qW-cQu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="gJc-o2-hbk"/>
-                            <constraint firstItem="l7F-qW-cQu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="hTL-wr-eKR"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="l7F-qW-cQu" secondAttribute="trailing" constant="-16" id="nha-Tz-8L5"/>
                             <constraint firstItem="XLA-FB-oyR" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="njq-Tm-RVk"/>
                             <constraint firstItem="SXD-mC-ePq" firstAttribute="top" secondItem="hkL-gR-8tw" secondAttribute="bottom" constant="8" id="o9Z-Vq-UY6"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="WdC-fI-UlG" secondAttribute="trailing" constant="-16" id="sgP-rv-AIQ"/>
-                            <constraint firstItem="XLA-FB-oyR" firstAttribute="top" secondItem="l7F-qW-cQu" secondAttribute="bottom" constant="16" id="tTu-dU-1Id"/>
+                            <constraint firstItem="WdC-fI-UlG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="rRP-9d-Jbr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WdC-fI-UlG" secondAttribute="trailing" constant="-16" id="xGa-AE-H5R"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="textViewPassword" destination="hkL-gR-8tw" id="ath-2k-xB9"/>
                         <outlet property="textViewUser" destination="XLA-FB-oyR" id="oQQ-CP-uw7"/>
+                        <segue destination="oU9-WN-jfZ" kind="showDetail" identifier="showMain" id="bcN-vV-5WX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="196" y="131"/>
+            <point key="canvasLocation" x="188" y="-233"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="6y8-Wc-Fp6">
+            <objects>
+                <viewController id="oU9-WN-jfZ" customClass="MainViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vPD-td-jtH"/>
+                        <viewControllerLayoutGuide type="bottom" id="ILA-vu-hI7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="b8u-MF-bjb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T9y-xn-1CS">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
+                                <subviews>
+                                    <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gpe-mE-UM9">
+                                        <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                        <color key="barTintColor" red="0.5430313349" green="0.69132721419999998" blue="0.29515084619999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <textAttributes key="titleTextAttributes">
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </textAttributes>
+                                        <items>
+                                            <navigationItem title="Bestanden (Grundstudium)" id="Zka-vD-QHm">
+                                                <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="rpH-W1-WCN">
+                                                    <connections>
+                                                        <action selector="refresh:" destination="oU9-WN-jfZ" id="vsr-wk-keV"/>
+                                                    </connections>
+                                                </barButtonItem>
+                                            </navigationItem>
+                                        </items>
+                                    </navigationBar>
+                                </subviews>
+                                <color key="backgroundColor" red="0.5430313349" green="0.69132721419999998" blue="0.29515084619999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="gpe-mE-UM9" firstAttribute="leading" secondItem="T9y-xn-1CS" secondAttribute="leading" id="6ox-9g-Dnv"/>
+                                    <constraint firstItem="gpe-mE-UM9" firstAttribute="top" secondItem="T9y-xn-1CS" secondAttribute="top" constant="20" id="l6Y-NC-V7e"/>
+                                    <constraint firstAttribute="trailing" secondItem="gpe-mE-UM9" secondAttribute="trailing" id="uG0-7D-dux"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="8kW-gX-qMf">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Ram-1i-sM5">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ram-1i-sM5" id="oqi-ki-kYV">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="8kW-gX-qMf" secondAttribute="trailing" constant="-16" id="FcR-f2-eMX"/>
+                            <constraint firstItem="T9y-xn-1CS" firstAttribute="top" secondItem="b8u-MF-bjb" secondAttribute="topMargin" id="R3J-kD-Ccd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="T9y-xn-1CS" secondAttribute="trailing" constant="-16" id="Va3-4C-FHx"/>
+                            <constraint firstItem="8kW-gX-qMf" firstAttribute="leading" secondItem="b8u-MF-bjb" secondAttribute="leadingMargin" constant="-16" id="dA5-Ty-yUq"/>
+                            <constraint firstItem="T9y-xn-1CS" firstAttribute="leading" secondItem="b8u-MF-bjb" secondAttribute="leadingMargin" constant="-16" id="jEC-ri-Ujg"/>
+                            <constraint firstItem="8kW-gX-qMf" firstAttribute="top" secondItem="T9y-xn-1CS" secondAttribute="bottom" id="lHp-P2-v2g"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btRefresh" destination="rpH-W1-WCN" id="DZl-Gj-nG4"/>
+                        <outlet property="tableView" destination="8kW-gX-qMf" id="NTw-Er-WIk"/>
+                        <segue destination="BYZ-38-t0r" kind="showDetail" identifier="showLogin" id="T6u-3I-54b"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uHC-Er-skb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-541" y="-233"/>
         </scene>
     </scenes>
 </document>
