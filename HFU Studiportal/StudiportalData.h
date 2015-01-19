@@ -11,9 +11,12 @@
 #import "TFHpple.h"
 #import "Seperator.h"
 
+#define USER_DEFAULTS_KEY_STUDIPORTAL_DATA @"studiportal.data.html"
+
 @interface StudiportalData : NSObject
 
 @property NSMutableArray *categoryList;
+@property NSString *html;
 
 -(id) initWithHtmlTable:(NSString*)html;
 -(id) initFromDisk;

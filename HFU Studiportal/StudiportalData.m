@@ -19,7 +19,8 @@
 }
 
 -(id) initFromDisk {
-    _categoryList = [[NSMutableArray alloc] init];
+    NSString *html = [[NSUserDefaults standardUserDefaults] stringForKey:USER_DEFAULTS_KEY_STUDIPORTAL_DATA];
+    _categoryList = [self parseTable:html];
     return [self init];
     
 }
@@ -35,10 +36,14 @@
 }
 
 -(void) save {
+    [[NSUserDefaults standardUserDefaults] setObject:self.html forKey:USER_DEFAULTS_KEY_STUDIPORTAL_DATA];
+    [[NSUserDefaults standardUserDefaults] synchronize];
     
 }
 
 -(NSMutableArray*) parseTable:(NSString*)html {
+    self.html = html;
+    
     NSMutableArray* categoryList = [[NSMutableArray alloc] init];
     NSData *data = [html dataUsingEncoding:NSUTF8StringEncoding];
     TFHpple *parser = [TFHpple hppleWithHTMLData:data encoding:@"UTF-8"];
