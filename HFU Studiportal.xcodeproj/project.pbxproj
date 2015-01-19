@@ -21,6 +21,12 @@
 		607950AE1A6A973B003B1280 /* RefreshTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 607950AC1A6A973B003B1280 /* RefreshTask.m */; };
 		607950B51A6BF3A6003B1280 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 607950B21A6BF3A6003B1280 /* MBProgressHUD.m */; };
 		607950C31A6C29CE003B1280 /* RefreshError.m in Sources */ = {isa = PBXBuildFile; fileRef = 607950C21A6C29CE003B1280 /* RefreshError.m */; };
+		607950C71A6C37AA003B1280 /* StudiportalData.m in Sources */ = {isa = PBXBuildFile; fileRef = 607950C61A6C37AA003B1280 /* StudiportalData.m */; };
+		607950CF1A6C3814003B1280 /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = 607950CA1A6C3814003B1280 /* TFHpple.m */; };
+		607950D01A6C3814003B1280 /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 607950CC1A6C3814003B1280 /* TFHppleElement.m */; };
+		607950D11A6C3814003B1280 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 607950CE1A6C3814003B1280 /* XPathQuery.m */; };
+		607950D31A6C42B5003B1280 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 607950D21A6C42B5003B1280 /* libxml2.dylib */; };
+		607950D51A6C449A003B1280 /* Seperator.m in Sources */ = {isa = PBXBuildFile; fileRef = 607950D41A6C449A003B1280 /* Seperator.m */; };
 		60983E7E1A696A5500DA4835 /* ExamCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 60983E7D1A696A5500DA4835 /* ExamCategory.m */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +67,16 @@
 		607950B21A6BF3A6003B1280 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		607950C11A6C294D003B1280 /* RefreshError.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RefreshError.h; sourceTree = "<group>"; };
 		607950C21A6C29CE003B1280 /* RefreshError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RefreshError.m; sourceTree = "<group>"; };
+		607950C51A6C34AC003B1280 /* StudiportalData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StudiportalData.h; sourceTree = "<group>"; };
+		607950C61A6C37AA003B1280 /* StudiportalData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudiportalData.m; sourceTree = "<group>"; };
+		607950C91A6C3814003B1280 /* TFHpple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHpple.h; sourceTree = "<group>"; };
+		607950CA1A6C3814003B1280 /* TFHpple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHpple.m; sourceTree = "<group>"; };
+		607950CB1A6C3814003B1280 /* TFHppleElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHppleElement.h; sourceTree = "<group>"; };
+		607950CC1A6C3814003B1280 /* TFHppleElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHppleElement.m; sourceTree = "<group>"; };
+		607950CD1A6C3814003B1280 /* XPathQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPathQuery.h; sourceTree = "<group>"; };
+		607950CE1A6C3814003B1280 /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPathQuery.m; sourceTree = "<group>"; };
+		607950D21A6C42B5003B1280 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		607950D41A6C449A003B1280 /* Seperator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Seperator.m; sourceTree = "<group>"; };
 		60983E7C1A6968B500DA4835 /* ExamCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExamCategory.h; sourceTree = "<group>"; };
 		60983E7D1A696A5500DA4835 /* ExamCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExamCategory.m; sourceTree = "<group>"; };
 		60983E7F1A696FC500DA4835 /* Seperator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Seperator.h; sourceTree = "<group>"; };
@@ -71,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				607950D31A6C42B5003B1280 /* libxml2.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,11 +104,15 @@
 		604F0A311A6820F900E0BB07 /* data */ = {
 			isa = PBXGroup;
 			children = (
+				607950C81A6C37FF003B1280 /* hpple */,
 				604F0A341A68211100E0BB07 /* Exam.h */,
 				604F0A351A68226B00E0BB07 /* Exam.m */,
 				60983E7C1A6968B500DA4835 /* ExamCategory.h */,
 				60983E7D1A696A5500DA4835 /* ExamCategory.m */,
 				60983E7F1A696FC500DA4835 /* Seperator.h */,
+				607950D41A6C449A003B1280 /* Seperator.m */,
+				607950C51A6C34AC003B1280 /* StudiportalData.h */,
+				607950C61A6C37AA003B1280 /* StudiportalData.m */,
 			);
 			name = data;
 			sourceTree = "<group>";
@@ -99,6 +120,7 @@
 		6064E6951A66B9D3000B7DDC = {
 			isa = PBXGroup;
 			children = (
+				607950D21A6C42B5003B1280 /* libxml2.dylib */,
 				6064E6A01A66B9D3000B7DDC /* HFU Studiportal */,
 				6064E6BA1A66B9D3000B7DDC /* HFU StudiportalTests */,
 				6064E69F1A66B9D3000B7DDC /* Products */,
@@ -181,6 +203,19 @@
 				607950C21A6C29CE003B1280 /* RefreshError.m */,
 			);
 			name = network;
+			sourceTree = "<group>";
+		};
+		607950C81A6C37FF003B1280 /* hpple */ = {
+			isa = PBXGroup;
+			children = (
+				607950C91A6C3814003B1280 /* TFHpple.h */,
+				607950CA1A6C3814003B1280 /* TFHpple.m */,
+				607950CB1A6C3814003B1280 /* TFHppleElement.h */,
+				607950CC1A6C3814003B1280 /* TFHppleElement.m */,
+				607950CD1A6C3814003B1280 /* XPathQuery.h */,
+				607950CE1A6C3814003B1280 /* XPathQuery.m */,
+			);
+			name = hpple;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,10 +321,15 @@
 			files = (
 				604F0A361A68226B00E0BB07 /* Exam.m in Sources */,
 				6064E6AA1A66B9D3000B7DDC /* ViewController.m in Sources */,
+				607950D51A6C449A003B1280 /* Seperator.m in Sources */,
 				60983E7E1A696A5500DA4835 /* ExamCategory.m in Sources */,
+				607950D01A6C3814003B1280 /* TFHppleElement.m in Sources */,
+				607950C71A6C37AA003B1280 /* StudiportalData.m in Sources */,
 				607950A41A6A9509003B1280 /* NotificationHost.m in Sources */,
 				607950B51A6BF3A6003B1280 /* MBProgressHUD.m in Sources */,
 				607950AE1A6A973B003B1280 /* RefreshTask.m in Sources */,
+				607950D11A6C3814003B1280 /* XPathQuery.m in Sources */,
+				607950CF1A6C3814003B1280 /* TFHpple.m in Sources */,
 				6064E6A71A66B9D3000B7DDC /* AppDelegate.m in Sources */,
 				607950A81A6A95F6003B1280 /* DialogHostViewController.m in Sources */,
 				607950C31A6C29CE003B1280 /* RefreshError.m in Sources */,
@@ -419,9 +459,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = /usr/lib/;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SDKROOT)/usr/include/libxml2",
+				);
 				INFOPLIST_FILE = "HFU Studiportal/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LIBTOOLFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -432,9 +479,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = /usr/lib/;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SDKROOT)/usr/include/libxml2",
+				);
 				INFOPLIST_FILE = "HFU Studiportal/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LIBTOOLFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
