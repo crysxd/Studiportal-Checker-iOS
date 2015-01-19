@@ -10,9 +10,15 @@
 
 @implementation ExamCategory
 
+-(instancetype)init {
+    self.examList = [[NSMutableArray alloc] init];
+    return [super init];
+    
+}
+
 -(id)initWithCategoryName:(NSString *)categoryName {
     self.categoryName = categoryName;
-    return self;
+    return [self init];
     
 }
 
