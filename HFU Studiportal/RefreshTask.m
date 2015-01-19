@@ -112,10 +112,10 @@
     }
     
     NSUInteger start = NSMaxRange(range);
-    range = [response rangeOfString:@"\"" options:0 range:NSMakeRange(start, 1024)];
+    NSRange searchRange = NSMakeRange(start, response.length-start);
+    range = [response rangeOfString:@"\"" options:0 range:searchRange];
     NSUInteger end = range.location;
     self.asi = [response substringWithRange:NSMakeRange(start, end-start)];
-    NSLog(@"asi:\n%@", self.asi);
 
     if([response rangeOfString:@"Anmeldung Fehlgeschlagen" options:NSCaseInsensitiveSearch].location != NSNotFound) {
         return [[LoginRefreshError alloc] init];
@@ -149,9 +149,31 @@
         
     }
     
+    NSRange range = [response rangeOfString:@"<table cellspacing=\"0\" cellpadding=\"5\" border=\"0\" align=\"center\" width=\"100%\">"];
+
+    if(range.location == NSNotFound) {
+        return [[RefreshError alloc] init];
+        
+    }
     
-    return [[NoChangeRefreshError alloc] init];
+    NSUInteger start = NSMaxRange(range);
+    NSRange searchRange = NSMakeRange(start, response.length-start);
+    range = [response rangeOfString:@"</table>" options:0 range:searchRange];
+    NSUInteger end = range.location;
+    NSString *table = [response substringWithRange:NSMakeRange(start, end-start)];
+
+    StudiportalData *newData = [[StudiportalData alloc] initWithHtmlTable:table];
+    StudiportalData *oldData = [[StudiportalData alloc] initFromDisk];
+    NSArray* changedExams = [newData findChangedExams:oldData];
     
+    
+    if(changedExams.count == 0) {
+        return [[NoChangeRefreshError alloc] init];
+
+    } else {
+        return nil;
+        
+    }
 }
 
 -(NSString*) sendPostToURL:(NSString*)url withParams:(NSString*)params {

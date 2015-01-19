@@ -10,6 +10,7 @@
 #import "DialogHostViewController.h"
 #import "NotificationHost.h"
 #import "RefreshError.h"
+#import "StudiportalData.h"
 
 #define URL_LOGIN @"https://studi-portal.hs-furtwangen.de/qisserver/rds?state=user&type=1&category=auth.login&startpage=portal.vm&breadCrumbSource=portal"
 #define URL_LOGOUT @"https://studi-portal.hs-furtwangen.de/qisserver/rds?state=user&type=4&re=last&category=auth.logout&breadCrumbSource=portal"
