@@ -43,6 +43,7 @@ typedef NS_ENUM(NSInteger, ExamNote) {
 @property NSString *malus;
 @property NSString *ects;
 @property NSString *semester;
+@property NSString *sws;
 @property NSString *kind;
 @property NSString *tryCount;
 @property NSString *grade;
