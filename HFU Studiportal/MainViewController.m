@@ -24,6 +24,9 @@
     [super viewDidLoad];
     self.btRefresh.tintColor = [UIColor whiteColor];
     
+    RefreshTask *task = [[RefreshTask alloc] initWithDialogHost:nil delegate:self];
+    [task start];
+    
 }
 
 -(void)viewDidAppear:(BOOL)animated {
@@ -41,6 +44,11 @@
 }
 
 -(void)refreshCompleteWithError:(RefreshError *)error {
+    if(error != nil && [error class] != [NoChangeRefreshError class]) {
+        [self showErrorDialogWithMessage:error.localizedMessage];
+        
+    }
+    
     if(error != nil && [error class] == [LoginRefreshError class]) {
         [self showLogin];
 

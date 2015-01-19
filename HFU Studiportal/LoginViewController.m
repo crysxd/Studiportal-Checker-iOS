@@ -47,6 +47,10 @@
             [self performSegueWithIdentifier:@"showMain" sender:self];
         
          }];
+        
+    } else {
+        [self showErrorDialogWithMessage:error.localizedMessage];
+        
     }
 }
 
