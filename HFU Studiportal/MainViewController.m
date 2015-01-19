@@ -14,10 +14,25 @@
 
 @implementation MainViewController
 
+-(void)loadView {
+    [super loadView];
+    self.loggedIn = [[[LoginStorage alloc] init] isLoggedIn];
+
+}
 
 -(void)viewDidLoad {
+    [super viewDidLoad];
     self.btRefresh.tintColor = [UIColor whiteColor];
     
+}
+
+-(void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    if(!self.loggedIn) {
+        [self showLogin];
+        
+    }
 }
 
 -(UIStatusBarStyle)preferredStatusBarStyle{
@@ -26,10 +41,21 @@
 }
 
 -(void)refreshCompleteWithError:(RefreshError *)error {
-    
+    if(error != nil && [error class] == [LoginRefreshError class]) {
+        [self showLogin];
+
+    }
+}
+
+-(void)showLogin {
+    [self performSegueWithIdentifier:@"showLogin" sender:self];
+
 }
 
 - (IBAction)refresh:(id)sender {
+    RefreshTask* task = [[RefreshTask alloc] initWithDialogHost:self delegate:self];
+    [task start];
+    
 }
 @end
 

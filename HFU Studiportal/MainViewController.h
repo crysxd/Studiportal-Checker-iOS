@@ -8,11 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "RefreshTask.h"
+#import "LoginStorage.h"
 
 @interface MainViewController : DialogHostViewController <RefreshTaskDelegate>
 
+@property BOOL loggedIn;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *btRefresh;
 - (IBAction)refresh:(id)sender;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
+-(void) showLogin;
 @end
