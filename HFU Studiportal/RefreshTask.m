@@ -79,10 +79,6 @@
     if(self.dialogHost != nil) {
         [self.dialogHost cancelProgressDialog];
         
-        if(occuredError != nil && [occuredError class] != [NoChangeRefreshError class]) {
-            [self.dialogHost showErrorDialogWithMessage:occuredError.localizedMessage];
-            
-        }
     }
     
     if(self.delegate != nil) {
@@ -172,7 +168,7 @@
     StudiportalData *oldData = [[StudiportalData alloc] initFromDisk];
     [newData save];
     NSArray* changedExams = [newData findChangedExams:oldData];
-        
+    
     if(changedExams.count == 0) {
         return [[NoChangeRefreshError alloc] init];
 
