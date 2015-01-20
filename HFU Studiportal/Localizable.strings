@@ -27,3 +27,4 @@
 "refresh.error.unknown"             = "Ein unbekannter Fehler ist aufgetreten";
 "button.text.logout"                = "Ausloggen";
 "button.text.reload"                = "Jetzt überprüfen";
+"button.text.online"                = "Studiportal online öffnen";
