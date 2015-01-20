@@ -107,7 +107,7 @@
                                         </textAttributes>
                                         <items>
                                             <navigationItem title="Bestanden (Grundstudium)" id="Zka-vD-QHm">
-                                                <barButtonItem key="leftBarButtonItem" image="ic_menu.png" id="MqR-jA-TzQ">
+                                                <barButtonItem key="leftBarButtonItem" image="Hamburger" id="MqR-jA-TzQ">
                                                     <connections>
                                                         <action selector="showMenu:" destination="oU9-WN-jfZ" id="d9r-th-8qp"/>
                                                     </connections>
@@ -173,6 +173,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ic_menu.png" width="25" height="25"/>
+        <image name="Hamburger" width="25" height="25"/>
     </resources>
 </document>
