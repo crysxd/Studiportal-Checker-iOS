@@ -18,10 +18,8 @@
 @property StudiportalData *data;
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *btMenu;
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *btRefresh;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
-- (IBAction)refresh:(id)sender;
 - (IBAction)showMenu:(id)sender;
 
 -(void) showLogin;

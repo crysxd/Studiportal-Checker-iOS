@@ -23,7 +23,6 @@
 
 -(void)viewDidLoad {
     [super viewDidLoad];
-    self.btRefresh.tintColor = [UIColor whiteColor];
     self.btMenu.tintColor = [UIColor whiteColor];
     self.sideMenuViewController.panGestureEnabled = YES;
     
@@ -80,12 +79,6 @@
 -(void)showLogin {
     [self performSegueWithIdentifier:@"showLogin" sender:self];
 
-}
-
-- (IBAction)refresh:(id)sender {
-    RefreshTask* task = [[RefreshTask alloc] initWithDialogHost:self delegate:self];
-    [task start];
-    
 }
 
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
