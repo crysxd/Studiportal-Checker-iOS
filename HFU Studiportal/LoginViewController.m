@@ -20,6 +20,9 @@
     [self setNeedsStatusBarAppearanceUpdate];
     self.sideMenuViewController.panGestureEnabled = false;
     
+    CategoryMenuController *sideController = (CategoryMenuController*) self.sideMenuViewController.leftMenuViewController;
+    sideController.data = nil;
+    
     // Do any additional setup after loading the view, typically from a nib.
     
 }

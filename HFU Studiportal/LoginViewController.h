@@ -10,6 +10,7 @@
 #import "RefreshTask.h"
 #import "LoginStorage.h"
 #import "RESideMenu.h"
+#import "CategoryMenuController.h"
 
 @interface LoginViewController : DialogHostViewController <RefreshTaskDelegate>
 
