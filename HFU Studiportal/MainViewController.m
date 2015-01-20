@@ -24,7 +24,9 @@
 -(void)viewDidLoad {
     [super viewDidLoad];
     self.btRefresh.tintColor = [UIColor whiteColor];
-    
+    self.btMenu.tintColor = [UIColor whiteColor];
+    self.sideMenuViewController.panGestureEnabled = YES;
+
     RefreshTask *task = [[RefreshTask alloc] initWithDialogHost:nil delegate:self];
     [task start];
     
@@ -56,6 +58,11 @@
         [self showLogin];
 
     }
+}
+
+- (IBAction)showMenu:(id)sender {
+    [self.sideMenuViewController presentLeftMenuViewController];
+    
 }
 
 -(void)showLogin {

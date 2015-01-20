@@ -9,15 +9,19 @@
 #import <UIKit/UIKit.h>
 #import "RefreshTask.h"
 #import "LoginStorage.h"
+#import "RESideMenu.h"
 
 @interface MainViewController : DialogHostViewController <RefreshTaskDelegate,  UITableViewDelegate, UITableViewDataSource>
 
 @property BOOL loggedIn;
 @property StudiportalData *data;
 
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *btMenu;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *btRefresh;
-- (IBAction)refresh:(id)sender;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+- (IBAction)refresh:(id)sender;
+- (IBAction)showMenu:(id)sender;
 
 -(void) showLogin;
 
