@@ -32,7 +32,6 @@
 		607950F31A6D8B0E003B1280 /* UICKeyChainStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 607950F21A6D8B0E003B1280 /* UICKeyChainStore.m */; };
 		607950FC1A6D9311003B1280 /* UIViewController+RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 607950F91A6D9311003B1280 /* UIViewController+RESideMenu.m */; };
 		607951041A6D9369003B1280 /* RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 607951001A6D9369003B1280 /* RESideMenu.m */; };
-		607951051A6D9369003B1280 /* UIViewController+RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 607951021A6D9369003B1280 /* UIViewController+RESideMenu.m */; };
 		6079510B1A6D95A3003B1280 /* RECommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6079510A1A6D95A3003B1280 /* RECommonFunctions.m */; };
 		6079510E1A6D9648003B1280 /* CategoryMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6079510D1A6D9648003B1280 /* CategoryMenuController.m */; };
 		60983E7E1A696A5500DA4835 /* ExamCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 60983E7D1A696A5500DA4835 /* ExamCategory.m */; };
@@ -95,8 +94,6 @@
 		607950F91A6D9311003B1280 /* UIViewController+RESideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+RESideMenu.m"; path = "../../../Downloads/RESideMenu-master/RESideMenu/UIViewController+RESideMenu.m"; sourceTree = "<group>"; };
 		607950FF1A6D9369003B1280 /* RESideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RESideMenu.h; sourceTree = "<group>"; };
 		607951001A6D9369003B1280 /* RESideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RESideMenu.m; sourceTree = "<group>"; };
-		607951011A6D9369003B1280 /* UIViewController+RESideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+RESideMenu.h"; sourceTree = "<group>"; };
-		607951021A6D9369003B1280 /* UIViewController+RESideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+RESideMenu.m"; sourceTree = "<group>"; };
 		607951091A6D95A3003B1280 /* RECommonFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RECommonFunctions.h; sourceTree = "<group>"; };
 		6079510A1A6D95A3003B1280 /* RECommonFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RECommonFunctions.m; sourceTree = "<group>"; };
 		6079510C1A6D9613003B1280 /* CategoryMenuController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CategoryMenuController.h; sourceTree = "<group>"; };
@@ -220,8 +217,6 @@
 				6079510A1A6D95A3003B1280 /* RECommonFunctions.m */,
 				607950FF1A6D9369003B1280 /* RESideMenu.h */,
 				607951001A6D9369003B1280 /* RESideMenu.m */,
-				607951011A6D9369003B1280 /* UIViewController+RESideMenu.h */,
-				607951021A6D9369003B1280 /* UIViewController+RESideMenu.m */,
 				607950F81A6D9311003B1280 /* UIViewController+RESideMenu.h */,
 				607950F91A6D9311003B1280 /* UIViewController+RESideMenu.m */,
 				607950B11A6BF3A6003B1280 /* MBProgressHUD.h */,
@@ -381,7 +376,6 @@
 				607950C31A6C29CE003B1280 /* RefreshError.m in Sources */,
 				6064E6A41A66B9D3000B7DDC /* main.m in Sources */,
 				607950F31A6D8B0E003B1280 /* UICKeyChainStore.m in Sources */,
-				607951051A6D9369003B1280 /* UIViewController+RESideMenu.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

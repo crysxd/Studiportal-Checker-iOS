@@ -26,6 +26,16 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             symbolName = "*0x10ab86420">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[WebTiledBackingLayer isOpaque]"
+                  moduleName = "WebCore"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
