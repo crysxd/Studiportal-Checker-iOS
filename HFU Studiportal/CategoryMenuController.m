@@ -11,11 +11,6 @@
 @implementation CategoryMenuController
 @synthesize data = _data;
 
--(instancetype)init {
-    return [super init];
-    
-}
-
 -(UIStatusBarStyle)preferredStatusBarStyle {
     return UIStatusBarStyleLightContent;
     
@@ -113,6 +108,34 @@
     header.backgroundColor = [UIColor clearColor];
     return header;
     
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if(indexPath.section == 0) {
+        if(self.delegate != nil) {
+            [self.delegate categorySelected:[self.data category:indexPath.row]];
+        
+        }
+    } else {
+        switch (indexPath.row) {
+            case 0:
+                if(self.delegate != nil) [self.delegate reloadPressed];
+                break;
+                
+            case 1:
+                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://studi-portal.hs-furtwangen.de/"]];
+                break;
+                
+            case 2:
+                [[[LoginStorage alloc] init] deleteUserAndPassword];
+                if(self.delegate != nil) [self.delegate reloadPressed];
+                break;
+
+        }
+    }
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+
 }
 
 -(void)setData:(StudiportalData *)data {

@@ -8,10 +8,21 @@
 
 #import <UIKit/UIKit.h>
 #import "StudiportalData.h"
+#import "LoginStorage.h"
+
+
+@protocol CategoryMenuControllerDelegate <NSObject>
+
+-(void) categorySelected:(ExamCategory*)category;
+-(void) reloadPressed;
+-(void) logoutPressed;
+
+@end
 
 @interface CategoryMenuController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property UITableView* table;
 @property (nonatomic) StudiportalData* data;
+@property id<CategoryMenuControllerDelegate> delegate;
 
 @end
