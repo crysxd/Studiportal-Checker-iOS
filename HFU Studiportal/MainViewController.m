@@ -95,6 +95,8 @@
     
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        
     }
     
     cell.textLabel.text = [self.selectedCategory exam:indexPath.row].name;
