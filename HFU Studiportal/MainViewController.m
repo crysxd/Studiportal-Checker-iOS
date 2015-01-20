@@ -38,6 +38,7 @@
 -(void)updateSideMenuControllerData {
     CategoryMenuController *sideController = (CategoryMenuController*) self.sideMenuViewController.leftMenuViewController;
     sideController.data = [[StudiportalData alloc] initFromDisk];
+    sideController.delegate = self;
     
 }
 
@@ -107,6 +108,23 @@
     
     cell.textLabel.text = [[self.data category:indexPath.section] exam:indexPath.row].name;
     return cell;
+    
+}
+
+-(void)categorySelected:(ExamCategory *)category {
+    
+}
+
+-(void)logoutPressed {
+    [self.sideMenuViewController hideMenuViewController];
+    [self showLogin];
+    
+}
+
+-(void)reloadPressed {
+    [self.sideMenuViewController hideMenuViewController];
+    RefreshTask *task = [[RefreshTask alloc] initWithDialogHost:self delegate:self];
+    [task start];
     
 }
 

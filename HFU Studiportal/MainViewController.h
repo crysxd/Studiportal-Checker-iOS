@@ -12,7 +12,7 @@
 #import "RESideMenu.h"
 #import "CategoryMenuController.h"
 
-@interface MainViewController : DialogHostViewController <RefreshTaskDelegate,  UITableViewDelegate, UITableViewDataSource>
+@interface MainViewController : DialogHostViewController <RefreshTaskDelegate,  CategoryMenuControllerDelegate, UITableViewDelegate, UITableViewDataSource>
 
 @property BOOL loggedIn;
 @property StudiportalData *data;
