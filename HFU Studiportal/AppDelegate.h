@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RESideMenu.h"
+#import "CategoryMenuController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

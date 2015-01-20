@@ -21,6 +21,27 @@
         [application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeBadge|UIUserNotificationTypeSound categories:nil]];
     }
 
+    // Create content and menu controllers
+    //
+    CategoryMenuController *leftMenuViewController = [[CategoryMenuController alloc] init];
+    
+    // Create side menu controller
+    //
+    RESideMenu *sideMenuViewController = [[RESideMenu alloc] initWithContentViewController:self.window.rootViewController
+                                                                    leftMenuViewController:leftMenuViewController
+                                                                   rightMenuViewController:nil];
+    
+    sideMenuViewController.preferredStatusBarStyle = 
+    sideMenuViewController.backgroundImage = [UIImage imageNamed:@"SideMenuBackground"];
+    sideMenuViewController.contentViewInPortraitOffsetCenterX = 85;
+    sideMenuViewController.contentViewScaleValue = 0.8;
+    sideMenuViewController.contentViewShadowEnabled = YES;
+    sideMenuViewController.animationDuration = 0.18f;
+    
+    // Make it a root controller
+    //
+    self.window.rootViewController = sideMenuViewController;
+    
     return YES;
     
 }
