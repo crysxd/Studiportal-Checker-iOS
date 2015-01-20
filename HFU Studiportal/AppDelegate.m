@@ -31,7 +31,6 @@
                                                                     leftMenuViewController:leftMenuViewController
                                                                    rightMenuViewController:nil];
     
-    sideMenuViewController.preferredStatusBarStyle = 
     sideMenuViewController.backgroundImage = [UIImage imageNamed:@"SideMenuBackground"];
     sideMenuViewController.contentViewInPortraitOffsetCenterX = 85;
     sideMenuViewController.contentViewScaleValue = 0.8;
