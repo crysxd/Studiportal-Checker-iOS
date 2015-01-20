@@ -157,6 +157,7 @@
                     </view>
                     <connections>
                         <outlet property="btMenu" destination="MqR-jA-TzQ" id="1gN-QA-IdG"/>
+                        <outlet property="navigationBar" destination="Zka-vD-QHm" id="5N7-T9-6HE"/>
                         <outlet property="tableView" destination="8kW-gX-qMf" id="NTw-Er-WIk"/>
                         <segue destination="BYZ-38-t0r" kind="showDetail" identifier="showLogin" id="T6u-3I-54b"/>
                     </connections>

@@ -20,6 +20,7 @@
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *btMenu;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UINavigationItem *navigationBar;
 
 - (IBAction)showMenu:(id)sender;
 

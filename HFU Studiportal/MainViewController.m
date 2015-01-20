@@ -105,6 +105,7 @@
 -(void)categorySelected:(ExamCategory *)category {
     [self.sideMenuViewController hideMenuViewController];
     self.selectedCategory = category;
+    self.navigationBar.title = category.categoryName;
     [self.tableView reloadData];
     
 }
