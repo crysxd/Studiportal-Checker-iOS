@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "StudiportalData.h"
 
-@interface CategoryMenuController : UIViewController
+@interface CategoryMenuController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+
+@property UITableView* table;
+@property (nonatomic) StudiportalData* data;
 
 @end
