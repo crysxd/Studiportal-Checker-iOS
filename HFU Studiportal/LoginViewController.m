@@ -18,6 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setNeedsStatusBarAppearanceUpdate];
+    self.sideMenuViewController.panGestureEnabled = false;
     
     // Do any additional setup after loading the view, typically from a nib.
     

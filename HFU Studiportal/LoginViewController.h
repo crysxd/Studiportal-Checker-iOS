@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "RefreshTask.h"
 #import "LoginStorage.h"
+#import "RESideMenu.h"
 
 @interface LoginViewController : DialogHostViewController <RefreshTaskDelegate>
 
