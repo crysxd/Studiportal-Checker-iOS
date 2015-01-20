@@ -48,7 +48,7 @@
             return self.data != nil ? self.data.categoryCount : 0;
             
         case 1:
-            return 2;
+            return 3;
             
         default:
             return 0;
@@ -84,6 +84,11 @@
                 break;
                 
             case 1:
+                cell.textLabel.text = NSLocalizedString(@"button.text.online", nil);
+                cell.imageView.image = [UIImage imageNamed:@"Online"];
+                break;
+                
+            case 2:
                 cell.textLabel.text = NSLocalizedString(@"button.text.logout", nil);
                 cell.imageView.image = [UIImage imageNamed:@"Logout"];
                 break;
