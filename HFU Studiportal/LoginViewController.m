@@ -22,6 +22,7 @@
     
     CategoryMenuController *sideController = (CategoryMenuController*) self.sideMenuViewController.leftMenuViewController;
     sideController.data = nil;
+    sideController.delegate = nil;
     
     // Do any additional setup after loading the view, typically from a nib.
     
