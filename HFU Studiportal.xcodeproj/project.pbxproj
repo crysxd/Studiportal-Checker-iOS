@@ -35,7 +35,6 @@
 		607951051A6D9369003B1280 /* UIViewController+RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 607951021A6D9369003B1280 /* UIViewController+RESideMenu.m */; };
 		6079510B1A6D95A3003B1280 /* RECommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6079510A1A6D95A3003B1280 /* RECommonFunctions.m */; };
 		6079510E1A6D9648003B1280 /* CategoryMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6079510D1A6D9648003B1280 /* CategoryMenuController.m */; };
-		607951101A6D96EC003B1280 /* ic_menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 6079510F1A6D96EC003B1280 /* ic_menu.png */; };
 		60983E7E1A696A5500DA4835 /* ExamCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 60983E7D1A696A5500DA4835 /* ExamCategory.m */; };
 /* End PBXBuildFile section */
 
@@ -102,7 +101,6 @@
 		6079510A1A6D95A3003B1280 /* RECommonFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RECommonFunctions.m; sourceTree = "<group>"; };
 		6079510C1A6D9613003B1280 /* CategoryMenuController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CategoryMenuController.h; sourceTree = "<group>"; };
 		6079510D1A6D9648003B1280 /* CategoryMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryMenuController.m; sourceTree = "<group>"; };
-		6079510F1A6D96EC003B1280 /* ic_menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_menu.png; sourceTree = "<group>"; };
 		60983E7C1A6968B500DA4835 /* ExamCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExamCategory.h; sourceTree = "<group>"; };
 		60983E7D1A696A5500DA4835 /* ExamCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExamCategory.m; sourceTree = "<group>"; };
 		60983E7F1A696FC500DA4835 /* Seperator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Seperator.h; sourceTree = "<group>"; };
@@ -191,7 +189,6 @@
 		6064E6A11A66B9D3000B7DDC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				6079510F1A6D96EC003B1280 /* ic_menu.png */,
 				604F0A381A6827B400E0BB07 /* Localizable.strings */,
 				6064E6A21A66B9D3000B7DDC /* Info.plist */,
 				6064E6A31A66B9D3000B7DDC /* main.m */,
@@ -343,7 +340,6 @@
 			files = (
 				604F0A391A6827B400E0BB07 /* Localizable.strings in Resources */,
 				6064E6AD1A66B9D3000B7DDC /* Main.storyboard in Resources */,
-				607951101A6D96EC003B1280 /* ic_menu.png in Resources */,
 				6064E6B21A66B9D3000B7DDC /* LaunchScreen.xib in Resources */,
 				6064E6AF1A66B9D3000B7DDC /* Images.xcassets in Resources */,
 			);
