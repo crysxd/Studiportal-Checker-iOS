@@ -17,7 +17,14 @@
 }
 
 -(id)initWithCategoryName:(NSString *)categoryName {
-    self.categoryName = categoryName;
+
+    self.categoryName = [categoryName stringByReplacingOccurrencesOfString:@"*" withString:@""];
+    self.categoryName = [self.categoryName stringByReplacingOccurrencesOfString:@":" withString:@""];
+    self.categoryName = [self.categoryName stringByReplacingOccurrencesOfString:@"Module/Teilmodule" withString:@"Module"];
+    self.categoryName = [self.categoryName stringByReplacingOccurrencesOfString:@"(ECTS) " withString:@""];
+    self.categoryName = [self.categoryName stringByReplacingOccurrencesOfString:@"Bestandene Module" withString:@"Bestanden"];
+    self.categoryName = [self.categoryName stringByTrimmingCharactersInSet:
+                         [NSCharacterSet whitespaceCharacterSet]];
     return [self init];
     
 }
