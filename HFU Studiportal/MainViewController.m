@@ -26,11 +26,19 @@
     self.btRefresh.tintColor = [UIColor whiteColor];
     self.btMenu.tintColor = [UIColor whiteColor];
     self.sideMenuViewController.panGestureEnabled = YES;
+    
+    [self updateSideMenuControllerData];
 
     RefreshTask *task = [[RefreshTask alloc] initWithDialogHost:nil delegate:self];
     [task start];
     
     
+    
+}
+
+-(void)updateSideMenuControllerData {
+    CategoryMenuController *sideController = (CategoryMenuController*) self.sideMenuViewController.leftMenuViewController;
+    sideController.data = [[StudiportalData alloc] initFromDisk];
     
 }
 
@@ -51,6 +59,10 @@
 -(void)refreshCompleteWithError:(RefreshError *)error {
     if(error != nil && [error class] != [NoChangeRefreshError class]) {
         [self showErrorDialogWithMessage:error.localizedMessage];
+        
+    } else {
+        [self updateSideMenuControllerData];
+        [self.tableView reloadData];
         
     }
     
