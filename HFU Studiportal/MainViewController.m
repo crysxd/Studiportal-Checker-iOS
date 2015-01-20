@@ -27,6 +27,7 @@
     self.sideMenuViewController.panGestureEnabled = YES;
     
     [self updateSideMenuControllerData];
+    [self categorySelected:[self.data category:0]];
 
     RefreshTask *task = [[RefreshTask alloc] initWithDialogHost:nil delegate:self];
     [task start];
@@ -82,18 +83,8 @@
 
 }
 
--(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return [self.data category:section].categoryName;
-    
-}
-
--(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return self.data.categoryCount;
-    
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.data category:section].examCount;
+    return self.selectedCategory.examCount;
     
 }
 
@@ -106,12 +97,15 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
     }
     
-    cell.textLabel.text = [[self.data category:indexPath.section] exam:indexPath.row].name;
+    cell.textLabel.text = [self.selectedCategory exam:indexPath.row].name;
     return cell;
     
 }
 
 -(void)categorySelected:(ExamCategory *)category {
+    [self.sideMenuViewController hideMenuViewController];
+    self.selectedCategory = category;
+    [self.tableView reloadData];
     
 }
 

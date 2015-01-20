@@ -16,6 +16,7 @@
 
 @property BOOL loggedIn;
 @property StudiportalData *data;
+@property ExamCategory *selectedCategory;
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *btMenu;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
