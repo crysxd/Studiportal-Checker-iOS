@@ -107,9 +107,14 @@
                                         </textAttributes>
                                         <items>
                                             <navigationItem title="Bestanden (Grundstudium)" id="Zka-vD-QHm">
+                                                <barButtonItem key="leftBarButtonItem" image="ic_menu.png" id="MqR-jA-TzQ">
+                                                    <connections>
+                                                        <action selector="showMenu:" destination="oU9-WN-jfZ" id="d9r-th-8qp"/>
+                                                    </connections>
+                                                </barButtonItem>
                                                 <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="rpH-W1-WCN">
                                                     <connections>
-                                                        <action selector="refresh:" destination="oU9-WN-jfZ" id="vsr-wk-keV"/>
+                                                        <action selector="refresh:" destination="oU9-WN-jfZ" id="hjR-Uz-Bnu"/>
                                                     </connections>
                                                 </barButtonItem>
                                             </navigationItem>
@@ -156,7 +161,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="btRefresh" destination="rpH-W1-WCN" id="DZl-Gj-nG4"/>
+                        <outlet property="btMenu" destination="MqR-jA-TzQ" id="1gN-QA-IdG"/>
+                        <outlet property="btRefresh" destination="rpH-W1-WCN" id="W5z-h6-yhD"/>
                         <outlet property="tableView" destination="8kW-gX-qMf" id="NTw-Er-WIk"/>
                         <segue destination="BYZ-38-t0r" kind="showDetail" identifier="showLogin" id="T6u-3I-54b"/>
                     </connections>
@@ -166,4 +172,7 @@
             <point key="canvasLocation" x="-541" y="-233"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ic_menu.png" width="25" height="25"/>
+    </resources>
 </document>
