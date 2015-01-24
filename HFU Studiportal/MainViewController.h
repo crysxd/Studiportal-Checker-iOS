@@ -23,7 +23,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UINavigationItem *navigationBar;
 
--(void) showLoginAnimated:(BOOL)animated;
+-(void) showLogin;
 -(void)updateSideMenuControllerData;
 
 @end

@@ -49,10 +49,9 @@
 
 -(void)refreshCompleteWithError:(RefreshError *)error {
     if(error == nil || [error class] == [NoChangeRefreshError class]) {
-          NSLog(@"%@",self.navigationController.viewControllers);
         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
             [[[LoginStorage alloc] init] saveUser:self.textViewUser.text password:self.textViewPassword.text];
-            [self.navigationController popViewControllerAnimated:YES];
+            [self.navigationController popViewControllerAnimated:NO];
             
          }];
         
