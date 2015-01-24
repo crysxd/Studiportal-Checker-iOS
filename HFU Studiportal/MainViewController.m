@@ -34,7 +34,7 @@
         [task start];
     
     } else {
-        [self showLoginAnimated:NO];
+        [self showLogin];
     
     }
 }
@@ -82,14 +82,14 @@
     }
     
     if(error != nil && [error class] == [LoginRefreshError class]) {
-        [self showLoginAnimated:YES];
+        [self showLogin];
 
     }
 }
 
--(void)showLoginAnimated:(BOOL)animated {
+-(void)showLogin {
     LoginViewController *loginController = [[LoginViewController alloc] initWithNibName:@"Login" bundle:nil];
-    [self.navigationController pushViewController:loginController animated:animated];
+    [self.navigationController pushViewController:loginController animated:NO];
 
 }
 
@@ -124,7 +124,7 @@
 
 -(void)logoutPressed {
     [self.sideMenuViewController hideMenuViewController];
-    [self showLoginAnimated:YES];
+    [self showLogin];
     
 }
 
