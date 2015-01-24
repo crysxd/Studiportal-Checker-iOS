@@ -18,38 +18,50 @@
     [super loadView];
     self.loggedIn = [[[LoginStorage alloc] init] isLoggedIn];
     self.data = [[StudiportalData alloc] initFromDisk];
-
+    self.navigationController.navigationBar.barStyle = UIStatusBarStyleLightContent;
+    
 }
 
 -(void)viewDidLoad {
     [super viewDidLoad];
     self.btMenu.tintColor = [UIColor whiteColor];
-    self.sideMenuViewController.panGestureEnabled = YES;
     
-    [self updateSideMenuControllerData];
-    [self categorySelected:[self.data category:0]];
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
 
-    RefreshTask *task = [[RefreshTask alloc] initWithDialogHost:nil delegate:self];
-    [task start];
+    if(self.loggedIn) {
+        RefreshTask *task = [[RefreshTask alloc] initWithDialogHost:nil delegate:self];
+        [task start];
     
+    } else {
+        [self showLoginAnimated:NO];
     
-    
+    }
 }
 
 -(void)updateSideMenuControllerData {
     CategoryMenuController *sideController = (CategoryMenuController*) self.sideMenuViewController.leftMenuViewController;
-    sideController.data = [[StudiportalData alloc] initFromDisk];
+    sideController.data = self.data = [[StudiportalData alloc] initFromDisk];
     sideController.delegate = self;
     
 }
 
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:NO animated:animated];
+    
+    self.sideMenuViewController.panGestureEnabled = YES;
+
+    [self updateSideMenuControllerData];
+    
+    if(self.data.categoryCount > 0)
+        [self categorySelected:[self.data category:0]];
+
+}
+
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    
-    if(!self.loggedIn) {
-        [self showLogin];
-        
-    }
+
 }
 
 -(UIStatusBarStyle)preferredStatusBarStyle{
@@ -59,8 +71,10 @@
 
 -(void)refreshCompleteWithError:(RefreshError *)error {
     if(error != nil && [error class] != [NoChangeRefreshError class]) {
-        [self showErrorDialogWithMessage:error.localizedMessage];
+        if([error class] == [LoginRefreshError class] && self.loggedIn) {
+            [self showErrorDialogWithMessage:error.localizedMessage];
         
+        }
     } else {
         [self updateSideMenuControllerData];
         [self.tableView reloadData];
@@ -68,18 +82,14 @@
     }
     
     if(error != nil && [error class] == [LoginRefreshError class]) {
-        [self showLogin];
+        [self showLoginAnimated:YES];
 
     }
 }
 
-- (IBAction)showMenu:(id)sender {
-    [self.sideMenuViewController presentLeftMenuViewController];
-    
-}
-
--(void)showLogin {
-    [self performSegueWithIdentifier:@"showLogin" sender:self];
+-(void)showLoginAnimated:(BOOL)animated {
+    LoginViewController *loginController = [[LoginViewController alloc] initWithNibName:@"Login" bundle:nil];
+    [self.navigationController pushViewController:loginController animated:animated];
 
 }
 
@@ -114,7 +124,7 @@
 
 -(void)logoutPressed {
     [self.sideMenuViewController hideMenuViewController];
-    [self showLogin];
+    [self showLoginAnimated:YES];
     
 }
 

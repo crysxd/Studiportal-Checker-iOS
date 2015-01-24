@@ -11,6 +11,7 @@
 #import "LoginStorage.h"
 #import "RESideMenu.h"
 #import "CategoryMenuController.h"
+#import "LoginViewController.h"
 
 @interface MainViewController : DialogHostViewController <RefreshTaskDelegate,  CategoryMenuControllerDelegate, UITableViewDelegate, UITableViewDataSource>
 
@@ -22,9 +23,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UINavigationItem *navigationBar;
 
-- (IBAction)showMenu:(id)sender;
-
--(void) showLogin;
+-(void) showLoginAnimated:(BOOL)animated;
 -(void)updateSideMenuControllerData;
 
 @end

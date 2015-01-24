@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		603856C01A73F13E00B8EEE8 /* UIViewController+RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 603856BF1A73F13E00B8EEE8 /* UIViewController+RESideMenu.m */; };
+		603856C41A74015A00B8EEE8 /* Login.xib in Resources */ = {isa = PBXBuildFile; fileRef = 603856C31A74015A00B8EEE8 /* Login.xib */; };
 		604F0A361A68226B00E0BB07 /* Exam.m in Sources */ = {isa = PBXBuildFile; fileRef = 604F0A351A68226B00E0BB07 /* Exam.m */; };
 		604F0A391A6827B400E0BB07 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 604F0A381A6827B400E0BB07 /* Localizable.strings */; };
 		6064E6A41A66B9D3000B7DDC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6064E6A31A66B9D3000B7DDC /* main.m */; };
@@ -50,6 +51,7 @@
 /* Begin PBXFileReference section */
 		603856BE1A73F13E00B8EEE8 /* UIViewController+RESideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+RESideMenu.h"; sourceTree = "<group>"; };
 		603856BF1A73F13E00B8EEE8 /* UIViewController+RESideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+RESideMenu.m"; sourceTree = "<group>"; };
+		603856C31A74015A00B8EEE8 /* Login.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Login.xib; sourceTree = "<group>"; };
 		604F0A341A68211100E0BB07 /* Exam.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Exam.h; sourceTree = "<group>"; };
 		604F0A351A68226B00E0BB07 /* Exam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Exam.m; sourceTree = "<group>"; };
 		604F0A381A6827B400E0BB07 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 				6079510C1A6D9613003B1280 /* CategoryMenuController.h */,
 				6079510D1A6D9648003B1280 /* CategoryMenuController.m */,
 				6064E6AB1A66B9D3000B7DDC /* Main.storyboard */,
+				603856C31A74015A00B8EEE8 /* Login.xib */,
 				6064E6AE1A66B9D3000B7DDC /* Images.xcassets */,
 				6064E6B01A66B9D3000B7DDC /* LaunchScreen.xib */,
 				6064E6A11A66B9D3000B7DDC /* Supporting Files */,
@@ -337,6 +340,7 @@
 				6064E6AD1A66B9D3000B7DDC /* Main.storyboard in Resources */,
 				6064E6B21A66B9D3000B7DDC /* LaunchScreen.xib in Resources */,
 				6064E6AF1A66B9D3000B7DDC /* Images.xcassets in Resources */,
+				603856C41A74015A00B8EEE8 /* Login.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

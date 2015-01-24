@@ -20,7 +20,7 @@
     if ([UIApplication instancesRespondToSelector:@selector(registerUserNotificationSettings:)]){
         [application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeBadge|UIUserNotificationTypeSound categories:nil]];
     }
-
+    
     // Create content and menu controllers
     //
     CategoryMenuController *leftMenuViewController = [[CategoryMenuController alloc] init];

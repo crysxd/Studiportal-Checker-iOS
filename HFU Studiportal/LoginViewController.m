@@ -19,6 +19,8 @@
     [super viewDidLoad];
     [self setNeedsStatusBarAppearanceUpdate];
     self.sideMenuViewController.panGestureEnabled = false;
+    self.navigationItem.hidesBackButton = YES;
+    self.navigationItem.title = @"Login";
     
     CategoryMenuController *sideController = (CategoryMenuController*) self.sideMenuViewController.leftMenuViewController;
     sideController.data = nil;
@@ -47,10 +49,11 @@
 
 -(void)refreshCompleteWithError:(RefreshError *)error {
     if(error == nil || [error class] == [NoChangeRefreshError class]) {
+          NSLog(@"%@",self.navigationController.viewControllers);
         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
             [[[LoginStorage alloc] init] saveUser:self.textViewUser.text password:self.textViewPassword.text];
-            [self performSegueWithIdentifier:@"showMain" sender:self];
-        
+            [self.navigationController popViewControllerAnimated:YES];
+            
          }];
         
     } else {

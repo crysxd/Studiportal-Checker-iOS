@@ -128,7 +128,7 @@
                 
             case 2:
                 [[[LoginStorage alloc] init] deleteUserAndPassword];
-                if(self.delegate != nil) [self.delegate reloadPressed];
+                if(self.delegate != nil) [self.delegate logoutPressed];
                 break;
 
         }
