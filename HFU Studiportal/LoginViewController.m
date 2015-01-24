@@ -51,7 +51,7 @@
     if(error == nil || [error class] == [NoChangeRefreshError class]) {
         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
             [[[LoginStorage alloc] init] saveUser:self.textViewUser.text password:self.textViewPassword.text];
-            [self.navigationController popViewControllerAnimated:NO];
+            [self.navigationController popViewControllerAnimated:YES];
             
          }];
         
