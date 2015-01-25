@@ -88,11 +88,6 @@
         TFHppleElement *col = [cols objectAtIndex:i];
         NSString *colspan = [[col attributes] objectForKey:@"colspan"];
         
-        if(colspan != nil && colspan.length > 0) {
-            offset += [colspan integerValue];
-            
-        }
-        
         NSString *text = [col.content stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
         
         switch(i + offset) {
@@ -110,6 +105,11 @@
             case 12: e.resignation = text; break;
             case 13: e.note = text; break;
                 
+        }
+        
+        if(colspan != nil && colspan.length > 0) {
+            offset += [colspan integerValue] - 1;
+            
         }
     }
     
