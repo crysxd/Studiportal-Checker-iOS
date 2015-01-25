@@ -30,3 +30,10 @@
 "button.text.online"                = "Studiportal online öffnen";
 "text.bonus"                        = "Bonus";
 "text.malus"                        = "Malus";
+"text.state"                        = "Status";
+"text.state.resignated"             = "Zurückgetreten";
+"text.note"                         = "Kommentar";
+"text.ects"                         = "ECTS";
+"text.grade"                        = "Note";
+"text.semester"                     = "Semester";
+"text.attempt"                      = "Versuch";

@@ -137,6 +137,39 @@
             detail2.text = @"";
             break;
             
+        case ExamKindPL:
+        case ExamKindP:
+        case ExamKindG:
+            if(e.isResignated) {
+                detail1.text = [NSString stringWithFormat:@"%@: %@",
+                                NSLocalizedString(@"text.state", nil),
+                                NSLocalizedString(@"text.state.resignated", nil)];
+                detail2.text = [NSString stringWithFormat:@"%@: %@",
+                                NSLocalizedString(@"text.note", nil),
+                                e.noteName];
+            } else {
+                if(e.stateEnum == ExamStateAN) {
+                    detail1.text = [NSString stringWithFormat:@"%@: %@ (%@ %@)",
+                                    NSLocalizedString(@"text.state", nil), e.stateName,
+                                    e.ects, NSLocalizedString(@"text.ects", nil)];
+                } else {
+                    detail1.text = [NSString stringWithFormat:@"%@: %@ (%@ %@)",
+                                    NSLocalizedString(@"text.grade", nil), e.grade,
+                                    e.ects, NSLocalizedString(@"text.ects", nil)];
+                }
+                
+                if(e.kindEnum == ExamKindG) {
+                    detail2.text = [NSString stringWithFormat:@"%@: %@",
+                                    NSLocalizedString(@"text.semester", nil), e.semester];
+                    
+                } else {
+                    detail2.text = [NSString stringWithFormat:@"%@: %@ (%@)",
+                                    NSLocalizedString(@"text.attempt", nil), e.tryCount, e.semester];
+                }
+            }
+            
+            break;
+            
         default:
             break;
     }
