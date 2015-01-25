@@ -170,6 +170,13 @@
             
             break;
             
+        case ExamKindVL:
+            detail1.text = [NSString stringWithFormat:@"%@: %@ (%@ %@)",
+                            NSLocalizedString(@"text.state", nil), e.stateName,
+                            e.ects, NSLocalizedString(@"text.ects", nil)];
+            detail2.text = NSLocalizedString(@"text.practical_work", nil);
+            break;
+            
         default:
             break;
     }

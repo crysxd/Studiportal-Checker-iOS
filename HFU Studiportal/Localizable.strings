@@ -37,3 +37,4 @@
 "text.grade"                        = "Note";
 "text.semester"                     = "Semester";
 "text.attempt"                      = "Versuch";
+"text.practical_work"               = "Praktikum / Vorleistung";
