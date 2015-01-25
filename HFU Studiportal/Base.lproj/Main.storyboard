@@ -49,7 +49,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Njg-6g-vRN" id="NYC-jd-g0L">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dId-XJ-09Z">
+                                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="an" translatesAutoresizingMaskIntoConstraints="NO" id="dId-XJ-09Z">
                                                     <rect key="frame" x="8" y="9" width="50" height="66"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w2f-Cu-wbE">
@@ -124,5 +124,6 @@
     </scenes>
     <resources>
         <image name="Hamburger" width="22" height="22"/>
+        <image name="an" width="32" height="32"/>
     </resources>
 </document>
