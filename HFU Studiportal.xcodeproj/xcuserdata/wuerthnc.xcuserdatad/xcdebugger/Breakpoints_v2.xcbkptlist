@@ -56,7 +56,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "91"
             endingLineNumber = "91"
-            landmarkName = "-showLoginAnimated:"
+            landmarkName = "-showLogin"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
