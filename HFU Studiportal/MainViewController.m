@@ -121,40 +121,47 @@
     NSString *reuseId = e.stateEnum == ExamStateUndefined ? @"StatelessExamCell" : @"ExamCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseId];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    UILabel *label = (UILabel*) [cell viewWithTag:100];
-    label.text = e.name;
     
-    label = (UILabel*) [cell viewWithTag:101];
-    label.text = @"Detail 1";
-    
-    label = (UILabel*) [cell viewWithTag:102];
-    label.text = @"Detail 2";
-    
+    UILabel *title = (UILabel*) [cell viewWithTag:100];
+    UILabel *detail1 = (UILabel*) [cell viewWithTag:101];
+    UILabel *detail2 = (UILabel*) [cell viewWithTag:102];
     UIImageView *icon = (UIImageView*) [cell viewWithTag:103];
     
-    if(icon != nil) {
-        switch (e.stateEnum) {
-            case ExamStateAN:
-                icon.image = [UIImage imageNamed:@"an"];
-                break;
+    title.text = e.name;
+    
+    switch (e.kindEnum) {
+        case ExamKindKO:
+            detail1.text = [NSString stringWithFormat:@"%@: %@ | %@: %@",
+                            NSLocalizedString(@"text.bonus", nil), e.bonus,
+                            NSLocalizedString(@"text.malus", nil), e.malus];
+            detail2.text = @"";
+            break;
             
-            case ExamStateBE:
-                icon.image = [UIImage imageNamed:@"be"];
-                break;
+        default:
+            break;
+    }
+    
+    switch (e.stateEnum) {
+        case ExamStateAN:
+            icon.image = [UIImage imageNamed:@"an"];
+            break;
             
-            case ExamStateEN:
-                icon.image = [UIImage imageNamed:@"en"];
-                break;
+        case ExamStateBE:
+            icon.image = [UIImage imageNamed:@"be"];
+            break;
             
-            case ExamStateNB:
-                icon.image = [UIImage imageNamed:@"nb"];
-                break;
+        case ExamStateEN:
+            icon.image = [UIImage imageNamed:@"en"];
+            break;
             
-            default:
-                icon.hidden = YES;
-                break;
+        case ExamStateNB:
+            icon.image = [UIImage imageNamed:@"nb"];
+            break;
             
-        }
+        default:
+            icon.hidden = YES;
+            break;
+            
     }
     
     return cell;

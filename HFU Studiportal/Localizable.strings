@@ -28,3 +28,5 @@
 "button.text.logout"                = "Ausloggen";
 "button.text.reload"                = "Jetzt überprüfen";
 "button.text.online"                = "Studiportal online öffnen";
+"text.bonus"                        = "Bonus";
+"text.malus"                        = "Malus";
