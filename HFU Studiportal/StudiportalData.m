@@ -80,7 +80,7 @@
 -(Exam*) createExam:(TFHppleElement*)element {
     NSArray *cols = [element searchWithXPathQuery:@"//td"];
     
-    Exam *e = [[Exam alloc] initWithExamNo:[[cols objectAtIndex:0] text]];
+    Exam *e = [[Exam alloc] initWithExamNo:[[cols objectAtIndex:0] content]];
     
     NSUInteger offset = 0;
     
@@ -93,7 +93,7 @@
             
         }
         
-        NSString *text = [col.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+        NSString *text = [col.content stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
         
         switch(i + offset) {
             case 1: e.name = text; break;
