@@ -130,13 +130,37 @@
     title.text = e.name;
     
     switch (e.kindEnum) {
-        case ExamKindKO:
-            detail1.text = [NSString stringWithFormat:@"%@: %@ | %@: %@",
-                            NSLocalizedString(@"text.bonus", nil), e.bonus,
-                            NSLocalizedString(@"text.malus", nil), e.malus];
+        case ExamKindKO: {
+            NSString *bonus = nil;
+            NSString *malus = nil;
+            
+            if(![e.bonus isEqualToString:@"-"]) {
+                bonus = [NSString stringWithFormat:@"%@: %@",
+                         NSLocalizedString(@"text.bonus", nil), e.bonus];
+                
+            }
+            
+            if(![e.malus isEqualToString:@"-"]) {
+                malus = [NSString stringWithFormat:@"%@: %@",
+                         NSLocalizedString(@"text.bonus", nil), e.malus];
+                
+            }
+            
+            if(malus == nil && bonus == nil) {
+                detail1.text = NSLocalizedString(@"text.no_ects", nil);
+                
+            } else if(malus != nil && bonus != nil) {
+                detail1.text = [NSString stringWithFormat:@"%@| %@", bonus, malus];
+                
+            } else {
+                detail1.text = bonus != nil ? bonus : malus;
+
+            }
+            
             detail2.text = @"";
             break;
             
+        }
         case ExamKindPL:
         case ExamKindP:
         case ExamKindG:
