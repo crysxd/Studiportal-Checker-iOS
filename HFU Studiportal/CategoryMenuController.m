@@ -20,7 +20,7 @@
     [super loadView];
     
     CGRect baseFrame = self.view.frame;
-    baseFrame.size.width -= 60;
+    baseFrame.size.width -= 45;
 
     self.table = [[UITableView alloc] initWithFrame:baseFrame];
     self.table.delegate = self;
