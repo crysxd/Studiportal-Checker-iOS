@@ -93,23 +93,70 @@
 
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if([self.selectedCategory exam:indexPath.row].class == [Seperator class]) {
+        return 0.0;
+    }
+    
+    return 72.0;
+    
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.selectedCategory.examCount;
     
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *simpleTableIdentifier = @"SimpleTableItem";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    Exam *e = [self.selectedCategory exam:indexPath.row];
     
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    if(e.class == [Seperator class]) {
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SeperatorCell"];
+        cell.separatorInset = UIEdgeInsetsMake(0, cell.bounds.size.width, 0, 0);
+        return cell;
         
     }
     
-    cell.textLabel.text = [self.selectedCategory exam:indexPath.row].name;
+    NSString *reuseId = e.stateEnum == ExamStateUndefined ? @"StatelessExamCell" : @"ExamCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseId];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    UILabel *label = (UILabel*) [cell viewWithTag:100];
+    label.text = e.name;
+    
+    label = (UILabel*) [cell viewWithTag:101];
+    label.text = @"Detail 1";
+    
+    label = (UILabel*) [cell viewWithTag:102];
+    label.text = @"Detail 2";
+    
+    UIImageView *icon = (UIImageView*) [cell viewWithTag:103];
+    
+    if(icon != nil) {
+        switch (e.stateEnum) {
+            case ExamStateAN:
+                icon.image = [UIImage imageNamed:@"an"];
+                break;
+            
+            case ExamStateBE:
+                icon.image = [UIImage imageNamed:@"be"];
+                break;
+            
+            case ExamStateEN:
+                icon.image = [UIImage imageNamed:@"en"];
+                break;
+            
+            case ExamStateNB:
+                icon.image = [UIImage imageNamed:@"nb"];
+                break;
+            
+            default:
+                icon.hidden = YES;
+                break;
+            
+        }
+    }
+    
     return cell;
     
 }
