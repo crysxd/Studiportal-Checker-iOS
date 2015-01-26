@@ -152,7 +152,7 @@
             } else if(malus != nil && bonus != nil) {
                 detail1.text = [NSString stringWithFormat:@"%@| %@", bonus, malus];
                 
-            } else {
+            } else {
                 detail1.text = bonus != nil ? bonus : malus;
 
             }
