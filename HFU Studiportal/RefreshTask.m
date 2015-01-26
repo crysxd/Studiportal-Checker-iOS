@@ -168,11 +168,12 @@
     StudiportalData *oldData = [[StudiportalData alloc] initFromDisk];
     [newData save];
     NSArray* changedExams = [newData findChangedExams:oldData];
-    
+
     if(changedExams.count == 0) {
         return [[NoChangeRefreshError alloc] init];
 
     } else {
+        [self notifyAboutChange:changedExams];
         return nil;
         
     }
@@ -208,6 +209,17 @@
     
     return [[NSString alloc] initWithData:result encoding:NSUTF8StringEncoding];
     
+}
+
+-(void) notifyAboutChange:(NSArray*)changes {
+    NotificationHost *notifier = [[NotificationHost alloc] init];
+    
+    for(Exam *e in changes) {
+        NSString *title = e.name;
+        NSString *subtitle = [NSString stringWithFormat:@"%@ - %@", e.grade, e.stateName];
+        [notifier showNotificationWithTitle:title andText:subtitle];
+        
+    }
 }
 
 @end

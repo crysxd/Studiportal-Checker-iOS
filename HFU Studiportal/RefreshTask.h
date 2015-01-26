@@ -34,5 +34,6 @@
 -(id) initWithDialogHost:(DialogHostViewController*)dialogHost delegate:(id<RefreshTaskDelegate>)delegate;
 -(id) initWithUserName:(NSString*)userName password:(NSString*)password dialogHost:(DialogHostViewController*)dialogHost delegate:(id<RefreshTaskDelegate>)delegate;
 -(void) start;
+-(void) notifyAboutChange:(NSArray*)changes;
 
 @end
