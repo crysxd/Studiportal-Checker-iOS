@@ -21,7 +21,7 @@
 -(id) initWithHtmlTable:(NSString*)html;
 -(id) initFromDisk;
 -(NSArray*) findChangedExams:(StudiportalData*)otherInstance;
--(NSArray*) searchExams:(NSString*)query;
+-(ExamCategory*) searchExams:(NSString*)query;
 -(void) save;
 -(NSMutableArray*) parseTable:(NSString*)html;
 -(Exam*) createExam:(TFHppleElement*)element;
@@ -32,5 +32,7 @@
 -(void) removeCategoryWithIndex:(NSUInteger)index;
 -(NSUInteger) categoryCount;
 -(ExamCategory*) category:(NSUInteger)index;
+-(Exam*)findExamWithExamNo:(NSString*) examNo;
+-(BOOL)doesList:(NSArray*) list containSubject:(NSString*) name;
 
 @end

@@ -26,13 +26,55 @@
 }
 
 -(NSArray*) findChangedExams:(StudiportalData*)otherInstance {
-    return [[NSArray alloc] init];
+    NSArray *all = [self allExams];
+    NSMutableArray *changed = [[NSMutableArray alloc] init];
+    
+    for (Exam *e in all) {
+        if(e.class != [Seperator class]) {
+            Exam *other = [otherInstance findExamWithExamNo:e.examNo];
+            
+            if(other != nil && other.grade != nil && ![other.grade isEqualToString:e.grade] && ![self doesList:changed containSubject:e.name]) {
+                [changed addObject:e];
+                
+            }
+            
+            if([e.name isEqualToString:@"Formale Sprachen"])
+               [changed addObject:e];
+            
+        }
+    }
+    
+    return changed;
     
 }
 
--(NSArray*) searchExams:(NSString*)query {
-    return [[NSArray alloc] init];
+-(BOOL)doesList:(NSArray*) list containSubject:(NSString*) name {
+    for (Exam *e in list) {
+        if([e.name isEqualToString:name]) {
+            return YES;
+            
+        }
+    }
+    
+    return NO;
+    
+}
 
+
+-(ExamCategory*) searchExams:(NSString*)query {
+    query = query.lowercaseString;
+    NSArray *all = [self allExams];
+    ExamCategory *result = [[ExamCategory alloc] initWithCategoryName:@"Result"];
+    
+    for (Exam *e in all) {
+        if([e.name.lowercaseString containsString:query]) {
+            [result  addExam:e];
+            
+        }
+    }
+    
+    return result;
+    
 }
 
 -(void) save {
@@ -140,6 +182,17 @@
     
     return exams;
 
+}
+
+-(Exam*) findExamWithExamNo:(NSString*)examNo {
+    for (Exam *e in self.allExams) {
+        if([e.examNo isEqualToString:examNo]) {
+            return e;
+        }
+    }
+    
+    return nil;
+    
 }
 
 -(void) addCategory:(ExamCategory*)category {
