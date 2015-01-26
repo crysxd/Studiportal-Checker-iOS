@@ -36,7 +36,6 @@ typedef NS_ENUM(NSInteger, ExamNote) {
 
 @interface Exam : NSObject
 
-@property (readonly) NSNumber *id;
 @property NSString *examNo;
 @property NSString *name;
 @property NSString *bonus;
