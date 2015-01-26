@@ -37,10 +37,6 @@
                 [changed addObject:e];
                 
             }
-            
-            if([e.name isEqualToString:@"Formale Sprachen"])
-               [changed addObject:e];
-            
         }
     }
     
