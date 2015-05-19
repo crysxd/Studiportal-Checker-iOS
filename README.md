@@ -14,7 +14,7 @@ https://play.google.com/store/apps/details?id=de.hfu.funfpunktnull
 Screenshots
 ===========
 ![alt tag](https://raw.githubusercontent.com/crysxd/Studiportal-Checker-iOS/screenshots/screen_1.png)
-![alt tag](https://raw.githubusercontent.com/crysxd/Studiportal-Checker-iOS/screenshots/screen_1.png)
-![alt tag](https://raw.githubusercontent.com/crysxd/Studiportal-Checker-iOS/screenshots/screen_1.png)
-![alt tag](https://raw.githubusercontent.com/crysxd/Studiportal-Checker-iOS/screenshots/screen_1.png)
-![alt tag](https://raw.githubusercontent.com/crysxd/Studiportal-Checker-iOS/screenshots/screen_1.png)
+![alt tag](https://raw.githubusercontent.com/crysxd/Studiportal-Checker-iOS/screenshots/screen_2.png)
+![alt tag](https://raw.githubusercontent.com/crysxd/Studiportal-Checker-iOS/screenshots/screen_3.png)
+![alt tag](https://raw.githubusercontent.com/crysxd/Studiportal-Checker-iOS/screenshots/screen_4.png)
+![alt tag](https://raw.githubusercontent.com/crysxd/Studiportal-Checker-iOS/screenshots/screen_5.png)
